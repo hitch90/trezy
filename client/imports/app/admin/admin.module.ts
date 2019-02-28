@@ -3,9 +3,11 @@ import { AdminHomepageComponent } from './admin-homepage/admin-homepage.componen
 import { AdminRoutingModule } from './admin-routing.module';
 import {
   MatButtonModule,
+  MatDialogModule,
   MatFormFieldModule,
   MatIconModule,
-  MatInputModule, MatListModule,
+  MatInputModule,
+  MatListModule,
   MatMenuModule,
   MatSelectModule,
   MatToolbarModule
@@ -17,6 +19,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AdminSharedModule } from './shared/admin-shared.module';
 import { AdminChannelsComponent } from './admin-channels/admin-channels.component';
+import { AdminCategoriesComponent } from './admin-categories/admin-categories.component';
+import {AdminCategoryFormComponent} from "./admin-categories/admin-category-form/admin-category-form.component";
+import {AdminCategoryDialogComponent} from "./admin-categories/admin-category-dialog/admin-category-dialog.component";
 
 @NgModule({
   imports: [
@@ -33,14 +38,19 @@ import { AdminChannelsComponent } from './admin-channels/admin-channels.componen
     AdminSharedModule,
     MatSelectModule,
     MatMenuModule,
-      MatListModule
+    MatListModule,
+    MatDialogModule
   ],
   declarations: [
     AdminHomepageComponent,
     AdminHeaderComponent,
     AdminChannelFormComponent,
-    AdminChannelsComponent
+    AdminChannelsComponent,
+    AdminCategoriesComponent,
+      AdminCategoryFormComponent,
+      AdminCategoryDialogComponent
   ],
+  entryComponents: [AdminCategoryFormComponent, AdminCategoryDialogComponent],
   providers: []
 })
 export class AdminModule {}

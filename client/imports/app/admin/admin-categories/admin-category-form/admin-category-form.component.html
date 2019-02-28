@@ -1,0 +1,32 @@
+<div class="admin-page-wrapper">
+  <h3 class="admin-page-title">Dodaj/Edytuj kategorię</h3>
+  <div class="row">
+    <div class="col-xs-12">
+      <form class="admin-page-form" [formGroup]="categoryForm" (submit)="add()">
+        <div class="admin-page-form-field">
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Nazwa</mat-label>
+            <input matInput formControlName="name" />
+          </mat-form-field>
+        </div>
+        <div class="admin-page-form-field">
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Opis</mat-label>
+            <textarea matInput formControlName="description"></textarea>
+          </mat-form-field>
+        </div>
+        <div class="admin-page-form-field">
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Url do zdjęcia</mat-label>
+            <input matInput formControlName="image" />
+          </mat-form-field>
+        </div>
+          <div class="form-field">
+              <button mat-raised-button color="primary" type="submit">
+                  Dodaj kategorię
+              </button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>

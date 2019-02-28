@@ -15,7 +15,8 @@ import {ToastrModule} from "ng6-toastr-notifications";
     AppRoutingModule,
     AdminModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+
   ],
   declarations: [
     AppComponent,

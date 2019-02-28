@@ -79,13 +79,15 @@ export class AdminChannelFormComponent implements OnInit {
   }
   add() {
     const values = this.channelForm.value;
-    this.channelService.add(values).subscribe(data => {
-      if (data) {
-        this.notifyService.pushSuccess('Ok', 'Kanał został dodany');
-        this.channelForm.reset();
-      } else {
-        this.notifyService.pushError('Błąd', 'Kanał istnieje');
-      }
-    });
+    if (this.channelForm.valid) {
+      this.channelService.add(values).subscribe(data => {
+        if (data) {
+          this.notifyService.pushSuccess('Ok', 'Kanał został dodany');
+          this.channelForm.reset();
+        } else {
+          this.notifyService.pushError('Błąd', 'Kanał istnieje');
+        }
+      });
+    }
   }
 }

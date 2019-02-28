@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminHomepageComponent } from './admin-homepage/admin-homepage.component';
 import { AdminChannelFormComponent } from './admin-channel-form/admin-channel-form.component';
 import {AdminChannelsComponent} from "./admin-channels/admin-channels.component";
+import {AdminCategoriesComponent} from "./admin-categories/admin-categories.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,11 @@ const routes: Routes = [
   {
     path: 'admin/channels',
     component: AdminChannelsComponent,
+    canActivate: []
+  },
+  {
+    path: 'admin/categories',
+    component: AdminCategoriesComponent,
     canActivate: []
   }
 ];

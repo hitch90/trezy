@@ -1,4 +1,4 @@
-import './imports/methods/todos';
 import './imports/methods/channels';
-import './imports/publications/todos'
+import './imports/methods/categories';
 import './imports/publications/channels'
+import './imports/publications/categories'
