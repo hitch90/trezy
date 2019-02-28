@@ -1,0 +1,65 @@
+<app-admin-header></app-admin-header>
+<div class="admin-page-wrapper">
+  <h3 class="admin-page-title">Dodaj kanał</h3>
+  <div class="row">
+    <div class="col-xs-12 col-lg-4">
+      <form
+        class="admin-page-form"
+        (submit)="getChannelInfo()"
+        [formGroup]="channelForm"
+      >
+        <div class="admin-page-form-field">
+          <mat-form-field class="field">
+            <input matInput placeholder="Link lub ID kanału" formControlName="id" />
+          </mat-form-field>
+        </div>
+        <div class="form-field">
+          <button mat-raised-button color="primary" type="submit">
+            Pobierz dane
+          </button>
+        </div>
+      </form>
+      <form class="admin-page-form" [formGroup]="channelForm" (submit)="add()">
+        <div class="admin-page-form-field">
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Nazwa kanału</mat-label>
+            <input matInput formControlName="name" />
+          </mat-form-field>
+        </div>
+        <div class="admin-page-form-field">
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Opis kanału</mat-label>
+            <textarea
+              matInput
+              formControlName="description"
+              rows="6"
+            ></textarea>
+          </mat-form-field>
+        </div>
+        <div class="admin-page-form-field">
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Avatar (url)</mat-label>
+            <input matInput formControlName="image" />
+          </mat-form-field>
+        </div>
+        <div class="admin-page-form-field">
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Link do kanału</mat-label>
+            <input matInput formControlName="url" />
+          </mat-form-field>
+        </div>
+        <div class="form-field">
+          <button mat-raised-button color="primary" type="submit">
+            Dodaj kanał
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col-xs-12 col-lg-4">
+      <app-admin-channel-info
+        [item]="channelInfo"
+        *ngIf="channelInfo"
+      ></app-admin-channel-info>
+    </div>
+  </div>
+</div>

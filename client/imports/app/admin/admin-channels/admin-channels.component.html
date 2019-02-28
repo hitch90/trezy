@@ -1,0 +1,21 @@
+<app-admin-header></app-admin-header>
+<div class="admin-page-wrapper">
+  <h3 class="admin-page-title">Lista kanałów</h3>
+  <div class="row">
+    <div class="col-xs-12 col-lg-4">
+      <mat-list role="list">
+        <mat-list-item
+          role="listitem"
+          *ngFor="let channel of (channels | async)"
+        >
+          <button mat-icon-button [routerLink]="['/admin/edit-channel', channel._id]"><mat-icon>edit</mat-icon></button>
+          <button mat-icon-button (click)="removeChannel(channel._id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <img matListAvatar [src]="channel.image" [alt]="channel.name" />
+          <h3 matLine>{{ channel.name }}</h3>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>
