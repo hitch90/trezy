@@ -1,8 +1,8 @@
 <div class="admin-page-wrapper">
-  <h3 class="admin-page-title">Dodaj/Edytuj kategorię</h3>
+  <h3 class="admin-page-title">Dodaj/Edytuj producenta</h3>
   <div class="row">
     <div class="col-xs-12">
-      <form class="admin-page-form" [formGroup]="categoryForm" (submit)="add()">
+      <form class="admin-page-form" [formGroup]="producerForm" (submit)="add()">
         <div class="admin-page-form-field">
           <mat-form-field class="field" appearance="outline">
             <mat-label>Nazwa</mat-label>
@@ -21,19 +21,9 @@
             <input matInput formControlName="image" />
           </mat-form-field>
         </div>
-        <div class="form-field">
-          <mat-form-field class="field" appearance="outline">
-            <mat-label>Kategoria nadrzędna</mat-label>
-            <mat-select formControlName="parent">
-              <mat-option *ngFor="let category of categories | async " [value]="category._id">
-                {{ category.name }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
           <div class="form-field">
               <button mat-raised-button color="primary" type="submit">
-                  Dodaj kategorię
+                  Dodaj producenta
               </button>
           </div>
       </form>

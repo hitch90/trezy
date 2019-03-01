@@ -1,16 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ApiService } from './api.service';
-import {MeteorObservable} from "meteor-rxjs";
-import {Category} from "../../../../../imports/models/categories";
+import { MeteorObservable } from 'meteor-rxjs';
+import { Category } from '../../../../../imports/models/categories';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
-  constructor(private apiService: ApiService) {}
+  constructor() {}
 
-  add(category:Category): Observable<any> {
+  add(category: Category): Observable<any> {
     return MeteorObservable.call('addCategory', category);
+  }
+  getChildren(parent: string): Observable<any> {
+    return MeteorObservable.call('getChildrenCategories', parent);
+  }
+  remove(id: string): Observable<any> {
+    return MeteorObservable.call('removeCategory', id);
   }
 }

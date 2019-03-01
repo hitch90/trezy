@@ -1,0 +1,24 @@
+<app-admin-header></app-admin-header>
+<div class="admin-page-wrapper">
+  <h3 class="admin-page-title">Lista produktów</h3>
+  <div class="row">
+    <div class="col-xs-12 col-lg-4">
+      <button mat-raised-button color="primary" routerLink="/admin/add-product">
+        Dodaj produkt
+      </button>
+      <mat-list role="list">
+        <mat-list-item
+          role="listitem"
+          *ngFor="let product of (products | async)"
+        >
+          <button mat-icon-button [routerLink]="['/admin/edit-product', product._id]"><mat-icon>edit</mat-icon></button>
+          <button mat-icon-button (click)="removeProduct(product._id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <img matListAvatar [src]="product.image" [alt]="product.name" *ngIf="product.image" />
+          <h3 matLine>{{ product.name }}</h3>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>

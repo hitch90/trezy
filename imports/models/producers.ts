@@ -1,7 +1,6 @@
-export interface Category {
+export interface Producer {
   _id?: string;
   name: string;
   description?: string;
   image?: string;
-  parent?: string;
 }

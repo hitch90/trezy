@@ -3,7 +3,8 @@
     <a class="logo" routerLink="/admin">Admin</a>
     <a class="link" routerLink="/admin/channels">Kanały</a>
     <a class="link" routerLink="/admin/categories">Kategorie</a>
-    <a class="link" routerLink="/admin">Produkty</a>
+    <a class="link" routerLink="/admin/producers">Producenci</a>
+    <a class="link" routerLink="/admin/products">Produkty</a>
     <a class="link" routerLink="/admin">Testy</a>
     <button mat-icon-button [matMenuTriggerFor]="adddropdown">
       <mat-icon>add</mat-icon>
@@ -12,10 +13,7 @@
       <button mat-menu-item routerLink="/admin/add-channel">
         <span>Kanał</span>
       </button>
-      <button mat-menu-item routerLink="admin/add-category">
-        <span>Kategorię</span>
-      </button>
-      <button mat-menu-item routerLink="admin/add-product">
+      <button mat-menu-item routerLink="/admin/add-product">
         <span>Produkt</span>
       </button>
       <button mat-menu-item routerLink="admin/add-test">

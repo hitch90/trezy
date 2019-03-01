@@ -1,0 +1,64 @@
+<app-admin-header></app-admin-header>
+<div class="admin-page-wrapper">
+  <h3 class="admin-page-title">Dodaj/Edytuj produkt</h3>
+  <div class="row">
+    <div class="col-xs-12 col-lg-4">
+      <form class="admin-page-form" [formGroup]="productForm" (submit)="add()">
+        <div class="admin-page-form-field">
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Nazwa produktu</mat-label>
+            <input matInput formControlName="name" />
+          </mat-form-field>
+        </div>
+        <div class="admin-page-form-field">
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Opis produktu</mat-label>
+            <textarea
+              matInput
+              formControlName="description"
+              rows="6"
+            ></textarea>
+          </mat-form-field>
+        </div>
+        <div class="admin-page-form-field">
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Zdjęcie (url)</mat-label>
+            <input matInput formControlName="image" />
+          </mat-form-field>
+        </div>
+        <div class="admin-page-form-field">
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Kategoria</mat-label>
+            <mat-select formControlName="category">
+              <mat-option
+                *ngFor="let category of (categories | async)"
+                [value]="category._id"
+              >
+                {{ category.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="admin-page-form-field">
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Producent</mat-label>
+            <mat-select formControlName="producer">
+              <mat-option
+                *ngFor="let producer of (producers | async)"
+                [value]="producer._id"
+              >
+                {{ producer.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="form-field">
+          <button mat-raised-button color="primary" type="submit">
+            Dodaj produkt
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col-xs-12 col-lg-4">produkt info</div>
+  </div>
+</div>

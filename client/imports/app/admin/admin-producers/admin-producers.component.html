@@ -1,34 +1,33 @@
 <app-admin-header></app-admin-header>
 <div class="admin-page-wrapper categories-page">
-  <h3 class="admin-page-title">Lista kategorii</h3>
+  <h3 class="admin-page-title">Lista producentów</h3>
   <div class="row">
     <div class="col-xs-12 col-lg-4">
       <button color="primary" mat-raised-button (click)="openDialog()">
-        Dodaj kategorię
+        Dodaj producenta
       </button>
       <mat-list role="list">
         <mat-list-item
           role="listitem"
           class="category-item"
-          *ngFor="let category of (categories | async)"
+          *ngFor="let producer of (producers | async)"
         >
           <button
             mat-icon-button
-            [routerLink]="['/admin/edit-category', category._id]"
+            [routerLink]="['/admin/edit-producer', producer._id]"
           >
             <mat-icon>edit</mat-icon>
           </button>
-          <button mat-icon-button (click)="remove(category._id)">
+          <button mat-icon-button (click)="remove(producer._id)">
             <mat-icon>delete</mat-icon>
           </button>
           <img
             matListAvatar
-            [src]="category.image"
-            [alt]="category.name"
-            *ngIf="category.image"
+            [src]="producer.image"
+            [alt]="producer.name"
+            *ngIf="producer.image"
           />
-          <h4 matLine class="category-name">{{ category.name }}</h4>
-          <p class="category-parent" matLine *ngIf="category.parent">Kat. nadrzędna: {{ getParentName(category.parent).name }}</p>
+          <h4 matLine class="category-name">{{ producer.name }}</h4>
         </mat-list-item>
       </mat-list>
     </div>

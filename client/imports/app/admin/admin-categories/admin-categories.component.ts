@@ -4,10 +4,12 @@ import { Observable, Subscription } from 'rxjs';
 
 import { Meteor } from 'meteor/meteor';
 import { MeteorObservable } from 'meteor-rxjs';
-import {Category} from "../../../../../imports/models/categories";
-import {Categories} from "../../../../../imports/collections/categories";
-import {MatDialog} from "@angular/material";
-import {AdminCategoryDialogComponent} from "./admin-category-dialog/admin-category-dialog.component";
+import { Category } from '../../../../../imports/models/categories';
+import { Categories } from '../../../../../imports/collections/categories';
+import { MatDialog } from '@angular/material';
+import { AdminCategoryDialogComponent } from './admin-category-dialog/admin-category-dialog.component';
+import { CategoryService, NotificationService } from '../../_core/_services';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-admin-categories',
@@ -18,11 +20,22 @@ export class AdminCategoriesComponent implements OnInit, OnDestroy {
   categories: Observable<Category[]>;
   categoriesListSubscription: Subscription;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    public dialog: MatDialog,
+    private categoryService: CategoryService,
+    private notifyService: NotificationService
+  ) {}
 
   ngOnInit() {
-    this.categoriesListSubscription = MeteorObservable.subscribe('categoriesList').subscribe(() => {
-      this.categories = Categories.find();
+    this.categoriesListSubscription = MeteorObservable.subscribe(
+      'categoriesList'
+    ).subscribe(() => {
+      this.categories = Categories.find().pipe(
+        map(item => {
+          console.log(item);
+          return item;
+        })
+      );
     });
   }
   ngOnDestroy() {
@@ -30,8 +43,13 @@ export class AdminCategoriesComponent implements OnInit, OnDestroy {
       this.categoriesListSubscription.unsubscribe();
     }
   }
-  remove(_id: string) {
-    Meteor.call('removeCategory', _id);
+  remove(id: string) {
+    this.categoryService.remove(id).subscribe(data => {
+      this.notifyService.pushSuccess('Ok', 'Kategoria usunięta');
+    });
+  }
+  getParentName(parent) {
+    return Categories.findOne({ _id: parent });
   }
   openDialog() {
     const dialogRef = this.dialog.open(AdminCategoryDialogComponent, {
