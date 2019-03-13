@@ -1,0 +1,28 @@
+<div class="admin-page-form-field">
+    <mat-form-field class="field" appearance="outline">
+        <mat-label>Wybierz atrybut aby dodać</mat-label>
+        <mat-select>
+            <mat-option
+                    *ngFor="let attr of (attributes | async)"
+                    [value]="attr._id"
+                    (onSelectionChange)="add(attr)"
+            >
+                {{ attr.name }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<h3 class="admin-page-subtitle">Lista atrybutów</h3>
+<div class="admin-page-form">
+    <div class="admin-page-form-field"  *ngFor="let attr of (attributesArr)">
+        <mat-form-field class="field" appearance="outline">
+            <mat-label>{{ attr.name }}</mat-label>
+            <input matInput [(ngModel)]="attr.value"  />
+        </mat-form-field>
+    </div>
+</div>
+<div class="form-field">
+    <button mat-raised-button color="primary" (click)="save()">
+        Zapisz
+    </button>
+</div>

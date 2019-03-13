@@ -1,0 +1,16 @@
+<section class="categories">
+  <h1 class="title">Kategorie</h1>
+  <ul class="list">
+    <li class="item" *ngFor="let category of categories">
+      <article class="category">
+        <figure class="cover" *ngIf="category.image">
+          <img [src]="category.image" />
+        </figure>
+        <h2 class="name">{{ category.name }}</h2>
+        <p class="categories-count" *ngIf="category.count">
+          Podkategorie: {{ category.count }}
+        </p>
+      </article>
+    </li>
+  </ul>
+</section>

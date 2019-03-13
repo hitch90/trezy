@@ -1,0 +1,38 @@
+.header {
+  background: var(--colorPrimary);
+  //margin: 0 0 30px;
+  .wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 75px;
+
+    //border-bottom: 1px solid var(--colorPrimary);
+  }
+  .logo {
+    color: #fff;
+    padding: 15px;
+    font: bold 20px/1.6 var(--fontPrimary);
+    margin: 0 50px 0 0;
+  }
+  .nav {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  .item {
+    padding: 0 10px;
+    a {
+      font: 400 16px/22px var(--fontPrimary);
+      padding: 0 10px;
+      display: block;
+      color: #fff;
+      opacity: 0.7;
+      .material-icons {
+        vertical-align: top;
+        line-height: 22px;
+      }
+    }
+  }
+}

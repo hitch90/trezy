@@ -27,6 +27,10 @@ import { AdminProductsComponent } from './admin-products/admin-products.componen
 import { AdminProducerDialogComponent } from './admin-producers/admin-producer-dialog/admin-producer-dialog.component';
 import { AdminProducerFormComponent } from './admin-producers/admin-producer-form/admin-producer-form.component';
 import { AdminProducersComponent } from './admin-producers/admin-producers.component';
+import { AdminAttributesComponent } from './admin-attributes/admin-attributes.component';
+import { AdminAttributeFormComponent } from './admin-attributes/admin-attribute-form/admin-attribute-form.component';
+import { AdminAttributeDialogComponent } from './admin-attributes/admin-attribute-dialog/admin-attribute-dialog.component';
+import { AdminProductFormAttributesComponent } from './admin-product-form/admin-product-form-attributes/admin-product-form-attributes.component';
 
 @NgModule({
   imports: [
@@ -58,13 +62,20 @@ import { AdminProducersComponent } from './admin-producers/admin-producers.compo
     AdminProductsComponent,
     AdminProducersComponent,
     AdminProducerDialogComponent,
-    AdminProducerFormComponent
+    AdminProducerFormComponent,
+    AdminAttributesComponent,
+    AdminAttributeFormComponent,
+    AdminAttributeDialogComponent,
+    AdminProductFormAttributesComponent
   ],
   entryComponents: [
     AdminCategoryFormComponent,
     AdminCategoryDialogComponent,
     AdminProducerDialogComponent,
-    AdminProducerFormComponent
+    AdminProducerFormComponent,
+    AdminAttributesComponent,
+    AdminAttributeFormComponent,
+    AdminAttributeDialogComponent
   ],
   providers: []
 })

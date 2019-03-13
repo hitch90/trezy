@@ -15,6 +15,13 @@ export class ProductService {
   get(id: string): Observable<any> {
     return MeteorObservable.call('getProduct', id);
   }
+  update(product: Product): Observable<any> {
+    return MeteorObservable.call('updateProduct', product);
+  }
+  updateAttrs(attributes, id): Observable<any> {
+    return MeteorObservable.call('updateProductAttributes', attributes, id);
+
+  }
   getAll(): Observable<any> {
     return MeteorObservable.call('getAllProducts');
   }

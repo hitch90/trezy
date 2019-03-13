@@ -3,7 +3,7 @@ export interface Product {
   name: string;
   description?: string;
   image?: string;
-  parent?: string;
   category: string;
+  producer?: string;
   attributes?: object[];
 }

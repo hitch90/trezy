@@ -54,11 +54,18 @@
         </div>
         <div class="form-field">
           <button mat-raised-button color="primary" type="submit">
-            Dodaj produkt
+            Dodaj / zaktualizuj produkt
           </button>
         </div>
       </form>
     </div>
-    <div class="col-xs-12 col-lg-4">produkt info</div>
+    <div class="col-xs-12 col-lg-4">
+      <h3 class="admin-page-title">Dane techniczne</h3>
+      <div class="alert alert-warning" role="alert" *ngIf="!productForm.value._id">
+        <i class="material-icons">error</i>
+        Zapisz produkt, aby móc edytować atrybuty.
+      </div>
+      <app-admin-product-form-attributes [productId]="productForm.value._id" [productAttributes]="product.attributes" *ngIf="productForm.value._id"></app-admin-product-form-attributes>
+    </div>
   </div>
 </div>

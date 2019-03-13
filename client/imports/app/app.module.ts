@@ -7,6 +7,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AppRoutingModule } from './app-routing.module';
 import { AdminModule } from './admin/admin.module';
 import {ToastrModule} from "ng6-toastr-notifications";
+import {FrontModule} from "./front/front.module";
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import {ToastrModule} from "ng6-toastr-notifications";
     FormsModule,
     AppRoutingModule,
     AdminModule,
+      FrontModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
 

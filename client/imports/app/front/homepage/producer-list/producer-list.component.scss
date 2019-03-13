@@ -1,0 +1,53 @@
+.producers {
+  margin: 0 auto 50px;
+  background: rgba(244,244,244,1);
+  padding: 50px 0;
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .title {
+    font: 900 28px/1.6 var(--fontPrimary);
+    padding: 0 0 30px;
+    margin: 0;
+    color: var(--textColor);
+  }
+  .list {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  .item {
+    color: var(--textColor);
+    &:hover {
+      color: var(--colorPrimary);
+      img {
+        transform: translateY(-50%) scale(1.05);
+      }
+    }
+  }
+  .cover {
+    width: 50px;
+    height: 50px;
+    margin: 0 0 10px;
+    img {
+      transition: 0.3s;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .name {
+    font: 500 16px/1.6 var(--fontPrimary);
+  }
+  .producer-count {
+    font: 300 13px/1.6 var(--fontPrimary);
+    color: var(--textSecondaryColor);
+  }
+}

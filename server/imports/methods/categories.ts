@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
-import {Category} from "../../../imports/models/categories";
-import {Categories} from "../../../imports/collections/categories";
+import { Category } from '../../../imports/models/categories';
+import { Categories } from '../../../imports/collections/categories';
 
 Meteor.methods({
   addCategory(category: Category): boolean {
@@ -16,8 +16,16 @@ Meteor.methods({
       _id
     });
   },
-  getCategory(_id: string):Category {
+  getCategory(_id: string): Category {
     return Categories.findOne({ _id });
   },
-  getAllCategories() {}
+  getAllCategories() {},
+
+  getSubcategoriesCount(parent) {
+    const subCat = Categories.find({ parent }).fetch();
+    return subCat.length;
+  },
+  getMainCategories() {
+    return Categories.find({ $or: [{ parent: '' }, { parent: null }] }).fetch();
+  }
 });

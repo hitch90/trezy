@@ -1,0 +1,11 @@
+.attributes-page {
+  .attribute-name {
+    font: 500 15px/2 var(--fontPrimary);
+  }
+  .attribute-parent {
+    font: 300 13px/2 var(--fontPrimary);
+  }
+  .attribute-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}

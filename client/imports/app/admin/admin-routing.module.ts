@@ -7,6 +7,7 @@ import { AdminCategoriesComponent } from './admin-categories/admin-categories.co
 import { AdminProductFormComponent } from './admin-product-form/admin-product-form.component';
 import {AdminProductsComponent} from "./admin-products/admin-products.component";
 import {AdminProducersComponent} from "./admin-producers/admin-producers.component";
+import {AdminAttributesComponent} from "./admin-attributes/admin-attributes.component";
 
 const routes: Routes = [
   {
@@ -32,6 +33,11 @@ const routes: Routes = [
   {
     path: 'admin/categories',
     component: AdminCategoriesComponent,
+    canActivate: []
+  },
+  {
+    path: 'admin/attributes',
+    component: AdminAttributesComponent,
     canActivate: []
   },
   {

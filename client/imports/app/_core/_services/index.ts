@@ -6,3 +6,4 @@ export * from './notification.service';
 export * from './category.services';
 export * from './product.services';
 export * from './producer.services';
+export * from './attribute.services';

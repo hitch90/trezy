@@ -19,5 +19,7 @@ Meteor.methods({
   getProducer(_id: string):Producer {
     return Producers.findOne({ _id });
   },
-  getAllProducers() {}
+  getAllProducers() {
+    return Producers.find({}).fetch();
+  }
 });

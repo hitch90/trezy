@@ -1,0 +1,16 @@
+<section class="producers">
+  <div class="container">
+    <h1 class="title">Producenci</h1>
+    <ul class="list">
+      <li class="item" *ngFor="let producer of producers">
+        <article class="producer">
+          <figure class="cover" *ngIf="producer.image">
+            <img [src]="producer.image" />
+          </figure>
+          <h2 class="name">{{ producer.name }}</h2>
+          <p class="producer-count">11 produktów</p>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>

@@ -11,6 +11,36 @@ Meteor.methods({
     }
     return false;
   },
+  updateProduct(product: Product) {
+    Products.update(
+      {
+        _id: product._id
+      },
+      {
+        $set: {
+          _id: product._id,
+          name: product.name,
+          description: product.description,
+          image: product.image,
+          category: product.category,
+          attributes: product.attributes,
+          producer: product.producer
+        }
+      }
+    );
+  },
+  updateProductAttributes(attributes, _id) {
+    Products.update(
+      {
+        _id
+      },
+      {
+        $set: {
+          attributes
+        }
+      }
+    );
+  },
   removeProduct(_id: string) {
     Products.remove({
       _id

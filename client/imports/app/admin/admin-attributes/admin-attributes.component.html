@@ -1,0 +1,35 @@
+<app-admin-header></app-admin-header>
+<div class="admin-page-wrapper attributes-page">
+  <h3 class="admin-page-title">Lista atrybutów</h3>
+  <div class="row">
+    <div class="col-xs-12 col-lg-4">
+      <button color="primary" mat-raised-button (click)="openDialog()">
+        Dodaj atrybut
+      </button>
+      <mat-list role="list">
+        <mat-list-item
+          role="listitem"
+          class="category-item"
+          *ngFor="let attribute of (attributes | async)"
+        >
+          <button
+            mat-icon-button
+            [routerLink]="['/admin/edit-attribute', attribute._id]"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="remove(attribute._id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <img
+            matListAvatar
+            [src]="attribute.image"
+            [alt]="attribute.name"
+            *ngIf="attribute.image"
+          />
+          <h4 matLine class="attribute-name">{{ attribute.name }}</h4>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>
