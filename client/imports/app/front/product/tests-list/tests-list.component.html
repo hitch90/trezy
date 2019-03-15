@@ -1,0 +1,22 @@
+<ul class="tests">
+    <li class="item" *ngFor="let test of tests">
+        <article class="test" *ngIf="test.type === 'text'">
+            <figure class="image">
+                <img [src]="test.image" [alt]="test.name">
+            </figure>
+            <div class="content">
+                <h3 class="test-name">
+                    <a [href]="test.link" [title]="test.name" target="_blank">
+                        {{ test.name }}
+                    </a>
+                </h3>
+                <p class="test-desc">
+                    {{ test.description }}
+                </p>
+                <a [href]="test.link" [title]="test.name" target="_blank" class="test-link">
+                    przejdź do recenzji
+                </a>
+            </div>
+        </article>
+    </li>
+</ul>

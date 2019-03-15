@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HomepageModule } from './homepage/homepage.module';
+import {ProductRoutingModule} from "./product/product-routing.module";
+import {ProductModule} from "./product/product.module";
 
 @NgModule({
   imports: [
@@ -32,7 +34,9 @@ import { HomepageModule } from './homepage/homepage.module';
     MatMenuModule,
     MatListModule,
     MatDialogModule,
-    HomepageModule
+    HomepageModule,
+      ProductModule,
+    ProductRoutingModule
   ],
   declarations: [],
   entryComponents: [],

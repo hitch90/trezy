@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { AdminHomepageComponent } from './admin-homepage/admin-homepage.component';
 import { AdminRoutingModule } from './admin-routing.module';
 import {
   MatButtonModule,
@@ -8,11 +7,10 @@ import {
   MatIconModule,
   MatInputModule,
   MatListModule,
-  MatMenuModule,
+  MatMenuModule, MatRadioModule,
   MatSelectModule,
   MatToolbarModule
 } from '@angular/material';
-import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminChannelFormComponent } from './admin-channel-form/admin-channel-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -31,6 +29,9 @@ import { AdminAttributesComponent } from './admin-attributes/admin-attributes.co
 import { AdminAttributeFormComponent } from './admin-attributes/admin-attribute-form/admin-attribute-form.component';
 import { AdminAttributeDialogComponent } from './admin-attributes/admin-attribute-dialog/admin-attribute-dialog.component';
 import { AdminProductFormAttributesComponent } from './admin-product-form/admin-product-form-attributes/admin-product-form-attributes.component';
+import { AdminHomepageModule } from './admin-homepage/admin-homepage.module';
+import {AdminTestsComponent} from "./admin-tests/admin-tests.component";
+import {AdminTestsFormComponent} from "./admin-tests-form/admin-tests-form.component";
 
 @NgModule({
   imports: [
@@ -48,11 +49,11 @@ import { AdminProductFormAttributesComponent } from './admin-product-form/admin-
     MatSelectModule,
     MatMenuModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+      MatRadioModule,
+    AdminHomepageModule
   ],
   declarations: [
-    AdminHomepageComponent,
-    AdminHeaderComponent,
     AdminChannelFormComponent,
     AdminChannelsComponent,
     AdminCategoriesComponent,
@@ -66,7 +67,9 @@ import { AdminProductFormAttributesComponent } from './admin-product-form/admin-
     AdminAttributesComponent,
     AdminAttributeFormComponent,
     AdminAttributeDialogComponent,
-    AdminProductFormAttributesComponent
+    AdminProductFormAttributesComponent,
+      AdminTestsComponent,
+      AdminTestsFormComponent
   ],
   entryComponents: [
     AdminCategoryFormComponent,
@@ -77,6 +80,7 @@ import { AdminProductFormAttributesComponent } from './admin-product-form/admin-
     AdminAttributeFormComponent,
     AdminAttributeDialogComponent
   ],
+  exports: [],
   providers: []
 })
 export class AdminModule {}

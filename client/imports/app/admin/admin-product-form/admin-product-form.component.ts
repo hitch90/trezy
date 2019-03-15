@@ -27,7 +27,7 @@ export class AdminProductFormComponent implements OnInit {
     description: [''],
     image: [''],
     category: ['', Validators.required],
-    producer: ['']
+    producer: [''],
   });
   categories: Observable<Category[]>;
   producers: Observable<Producer[]>;
@@ -76,7 +76,7 @@ export class AdminProductFormComponent implements OnInit {
               description: data['description'],
               image: data['image'],
               category: data['category'],
-              producer: data['producer']
+              producer: data['producer'],
             });
             this.product = data;
           }

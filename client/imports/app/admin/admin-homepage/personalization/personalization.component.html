@@ -1,0 +1,61 @@
+<div class="row" *ngIf="place === 'homepage'">
+  <div class="col-xs-12">
+    <h3 class="admin-page-subtitle">Produkty wyróżnionie</h3>
+    <form [formGroup]="personalizationForm" (submit)="save()">
+      <div class="row">
+        <div class="col-xs-12 col-lg-3">
+          <div class="admin-page-form-field">
+            <mat-form-field class="field" appearance="outline">
+              <mat-label>Duży produkt</mat-label>
+              <mat-select formControlName="product_big">
+                <mat-option
+                  *ngFor="let product of (products | async)"
+                  [value]="product._id"
+                >
+                  {{ product.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-xs-12 col-lg-3">
+          <div class="admin-page-form-field">
+            <mat-form-field class="field" appearance="outline">
+              <mat-label>Mały produkt 1.</mat-label>
+              <mat-select formControlName="product_small_top">
+                <mat-option
+                  *ngFor="let product of (products | async)"
+                  [value]="product._id"
+                >
+                  {{ product.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-xs-12 col-lg-3">
+          <div class="admin-page-form-field">
+            <mat-form-field class="field" appearance="outline">
+              <mat-label>Mały produkt 2.</mat-label>
+              <mat-select formControlName="product_small_bottom">
+                <mat-option
+                  *ngFor="let product of (products | async)"
+                  [value]="product._id"
+                >
+                  {{ product.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-xs-12 col-lg-2">
+          <div class="form-field">
+            <button mat-raised-button color="primary" type="submit">
+              Zapisz
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

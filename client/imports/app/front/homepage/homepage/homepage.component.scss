@@ -1,0 +1,9 @@
+.homepage {
+  .new-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    max-width: 1440px;
+    margin: 0 auto 30px;
+  }
+}

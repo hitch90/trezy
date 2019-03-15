@@ -6,4 +6,5 @@ export interface Product {
   category: string;
   producer?: string;
   attributes?: object[];
+  added: number;
 }

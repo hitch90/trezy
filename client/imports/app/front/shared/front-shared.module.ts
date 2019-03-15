@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material';
+import {MatButtonModule, MatIconModule, MatMenuModule} from '@angular/material';
 import { HeaderComponent } from './header/header.component';
 
 @NgModule({

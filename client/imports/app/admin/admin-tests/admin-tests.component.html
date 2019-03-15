@@ -1,0 +1,23 @@
+<app-admin-header></app-admin-header>
+<div class="admin-page-wrapper">
+  <h3 class="admin-page-title">Lista testów</h3>
+  <div class="row">
+    <div class="col-xs-12 col-lg-4">
+      <button mat-raised-button color="primary" routerLink="/admin/add-test">
+        Dodaj test
+      </button>
+      <mat-list role="list">
+        <mat-list-item
+          role="listitem"
+          *ngFor="let test of (tests | async)"
+        >
+          <button mat-icon-button [routerLink]="['/admin/edit-test', test._id]"><mat-icon>edit</mat-icon></button>
+          <button mat-icon-button (click)="removeTest(test._id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <h3 matLine>{{ test.name }}</h3>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>

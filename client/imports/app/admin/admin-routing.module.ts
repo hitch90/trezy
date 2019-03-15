@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AdminHomepageComponent } from './admin-homepage/admin-homepage.component';
+import { AdminHomepageComponent } from './admin-homepage/admin-homepage/admin-homepage.component';
 import { AdminChannelFormComponent } from './admin-channel-form/admin-channel-form.component';
 import { AdminChannelsComponent } from './admin-channels/admin-channels.component';
 import { AdminCategoriesComponent } from './admin-categories/admin-categories.component';
@@ -8,6 +8,8 @@ import { AdminProductFormComponent } from './admin-product-form/admin-product-fo
 import {AdminProductsComponent} from "./admin-products/admin-products.component";
 import {AdminProducersComponent} from "./admin-producers/admin-producers.component";
 import {AdminAttributesComponent} from "./admin-attributes/admin-attributes.component";
+import {AdminTestsComponent} from "./admin-tests/admin-tests.component";
+import {AdminTestsFormComponent} from "./admin-tests-form/admin-tests-form.component";
 
 const routes: Routes = [
   {
@@ -48,6 +50,21 @@ const routes: Routes = [
   {
     path: 'admin/add-product',
     component: AdminProductFormComponent,
+    canActivate: []
+  },
+  {
+    path: 'admin/tests',
+    component: AdminTestsComponent,
+    canActivate: []
+  },
+  {
+    path: 'admin/add-test',
+    component: AdminTestsFormComponent,
+    canActivate: []
+  },
+  {
+    path: 'admin/edit-test/:id',
+    component: AdminTestsFormComponent,
     canActivate: []
   },
   {

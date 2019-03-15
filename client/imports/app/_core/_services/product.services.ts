@@ -13,7 +13,14 @@ export class ProductService {
     return MeteorObservable.call('addProduct', product);
   }
   get(id: string): Observable<any> {
-    return MeteorObservable.call('getProduct', id);
+    let product$;
+    product$ = MeteorObservable.call('getProduct', id);
+    return new Observable(observer => {
+      product$.subscribe(data => {
+        observer.next(data);
+        observer.complete();
+      });
+    });
   }
   update(product: Product): Observable<any> {
     return MeteorObservable.call('updateProduct', product);
@@ -27,5 +34,18 @@ export class ProductService {
   }
   remove(id: string): Observable<any> {
     return MeteorObservable.call('removeCategory', id);
+  }
+  getNewest():Observable<Product> {
+    let products$;
+    products$ = MeteorObservable.call('getNewestProducts');
+    return new Observable(observer => {
+      products$.subscribe(data => {
+        for (let item of data) {
+          observer.next(item);
+        }
+        observer.complete();
+      });
+    });
+
   }
 }

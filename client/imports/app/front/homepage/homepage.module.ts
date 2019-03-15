@@ -5,10 +5,12 @@ import {FrontSharedModule} from "../shared/front-shared.module";
 import {CategoriesListComponent} from "./categories-list/categories-list.component";
 import {FeaturedProductComponent} from "./featured-product/featured-product.component";
 import {ProducerListComponent} from "./producer-list/producer-list.component";
+import {ProductsListComponent} from "./products-list/products-list.component";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
-  imports: [CommonModule, FrontSharedModule],
-  declarations: [HomepageComponent, CategoriesListComponent, FeaturedProductComponent, ProducerListComponent],
+  imports: [CommonModule, FrontSharedModule, RouterModule],
+  declarations: [HomepageComponent, CategoriesListComponent, FeaturedProductComponent, ProducerListComponent, ProductsListComponent],
   exports: [HomepageComponent],
   providers: []
 })

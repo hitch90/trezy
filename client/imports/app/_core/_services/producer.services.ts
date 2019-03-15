@@ -15,7 +15,7 @@ export class ProducerService {
   remove(id: string): Observable<any> {
     return MeteorObservable.call('removeProducer', id);
   }
-  get(id: string): Observable<object> {
+  get(id: string): Observable<Producer> {
     let producer$;
     producer$ = MeteorObservable.call('getProducer', id);
     return new Observable(observer => {

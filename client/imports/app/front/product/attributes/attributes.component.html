@@ -1,0 +1,14 @@
+<ul class="attributes">
+    <li class="title">Specyfikacja techniczna // <a href="#">zobacz szczegóły</a></li>
+    <li class="item" *ngFor="let attr of attributes | slice:0:5;">
+        <span class="label">
+             <span class="icon">
+                <mat-icon *ngIf="attr['icon']">{{ attr['icon'] }}</mat-icon>
+            </span>
+            {{ attr['name'] }}
+        </span>
+        <span class="value">
+            {{ attr['value'] }}
+        </span>
+    </li>
+</ul>

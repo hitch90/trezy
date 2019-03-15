@@ -1,0 +1,72 @@
+<app-admin-header></app-admin-header>
+<div class="admin-page-wrapper">
+  <h3 class="admin-page-title">Dodaj/Edytuj test</h3>
+  <div class="row">
+    <div class="col-xs-12 col-lg-4">
+      <form class="admin-page-form" [formGroup]="testForm" (submit)="add()">
+        <mat-radio-group formControlName="type" class="row" style="margin: 0 0 20px;">
+          <div class="col-xs-6">
+            <mat-radio-button value="text">
+              Recenzja / test - tekst
+            </mat-radio-button>
+          </div>
+          <div class="col-xs-6">
+            <mat-radio-button value="video-yt">
+              Test video - Youtube
+            </mat-radio-button>
+          </div>
+        </mat-radio-group>
+        <div class="admin-page-form-field">
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Produkt</mat-label>
+            <mat-select formControlName="product">
+              <mat-option
+                *ngFor="let product of (products | async)"
+                [value]="product._id"
+              >
+                {{ product.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="admin-page-form-field">
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Nazwa / tytuł</mat-label>
+            <input matInput formControlName="name" />
+          </mat-form-field>
+        </div>
+        <div *ngIf="testForm.value.type === 'text'">
+          <div class="admin-page-form-field">
+            <mat-form-field class="field" appearance="outline">
+              <mat-label>Wstęp</mat-label>
+              <textarea
+                      matInput
+                      formControlName="description"
+                      rows="6"
+              ></textarea>
+            </mat-form-field>
+          </div>
+          <div class="admin-page-form-field">
+            <mat-form-field class="field" appearance="outline">
+              <mat-label>Zdjęcie / miniaturka</mat-label>
+              <input matInput formControlName="image" />
+            </mat-form-field>
+          </div>
+          <div class="admin-page-form-field">
+            <mat-form-field class="field" appearance="outline">
+              <mat-label>Link do recenzji</mat-label>
+              <input matInput formControlName="link" />
+            </mat-form-field>
+          </div>
+        </div>
+        <div *ngIf="testForm.value.type === 'video-yt'">bbbbb</div>
+        <div class="admin-page-form-field">
+          <button mat-raised-button color="primary" type="submit">
+            Dodaj test
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col-xs-12 col-lg-4"></div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+.attributes {
+  max-width: 480px;
+  margin: 30px 0 0;
+  .title {
+    font: 700 15px/35px var(--fontPrimary);
+    color: #fff;
+    a {
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 400;
+    }
+  }
+  .item {
+    color: #fff;
+    font: normal 14px/35px var(--fontPrimary);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+  .icon {
+    display: inline-block;
+    width: 35px;
+    line-height: 35px;
+    text-align: right;
+    margin: 0 4px 0 0;
+    .material-icons {
+      font-size: 20px;
+      line-height: 35px;
+      vertical-align: top;
+    }
+  }
+  .label {
+    font-weight: bold;
+    text-align: right;
+  }
+  .value {
+    text-align: left;
+  }
+}
