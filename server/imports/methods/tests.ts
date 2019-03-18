@@ -19,5 +19,9 @@ Meteor.methods({
     Tests.remove({
       _id
     });
+  },
+  getNewestTests() {
+    return Tests.find({ $query: {}, $orderby: { added : -1 } }, {limit: 6} ).fetch();
+
   }
 });

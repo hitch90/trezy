@@ -1,14 +1,14 @@
 <div class="featured-products" *ngIf="!isLoading">
   <div class="container">
-    <div class="hero" [style.backgroundImage]="'url(' + product.image + ')'">
+    <div class="hero" [style.backgroundImage]="'url(' + product.image + ')'" [routerLink]="'/product/' + product._id">
       <h2 class="hero-name">{{ product.name }}</h2>
-      <h3 class="hero-category" *ngIf="product.category_data">
-        {{ product.category_data.name }}
+      <h3 class="hero-category" *ngIf="product['category_data']">
+        {{ product['category_data'].name }}
       </h3>
-      <h3 class="hero-producer" *ngIf="product.producer_data">
+      <h3 class="hero-producer" *ngIf="product['producer_data']">
         <img
-          [src]="product.producer_data.image"
-          [alt]="product.producer_data.name"
+          [src]="product['producer_data'].image"
+          [alt]="product['producer_data'].name"
         />
       </h3>
       <h4 class="hero-test-count">
@@ -20,6 +20,7 @@
         class="small-item"
         *ngFor="let product of smallProducts"
         [style.backgroundImage]="'url(' + product.image + ')'"
+        [routerLink]="'/product/' + product._id"
       >
         <h2 class="small-name">{{ product.name }}</h2>
         <h3 class="small-category" *ngIf="product.category_data">

@@ -1,4 +1,4 @@
-<ul class="tests">
+<ul class="tests" [ngClass]="{'video' : type === 'video-yt'}">
     <li class="item" *ngFor="let test of tests">
         <article class="test" *ngIf="test.type === 'text'">
             <figure class="image">
@@ -16,6 +16,23 @@
                 <a [href]="test.link" [title]="test.name" target="_blank" class="test-link">
                     przejdź do recenzji
                 </a>
+            </div>
+        </article>
+
+        <article class="video-test" *ngIf="test.type === 'video-yt'">
+            <figure class="image">
+                <img [src]="test.image" [alt]="test.name">
+                <a [href]="test.link" [title]="test.name" target="_blank" class="link">
+                    przejdź do testu
+                </a>
+            </figure>
+            <div class="content">
+                <h3 class="name">
+                    <a [href]="test.link" [title]="test.name" target="_blank">
+                        {{ test.name }}
+                    </a>
+                </h3>
+
             </div>
         </article>
     </li>

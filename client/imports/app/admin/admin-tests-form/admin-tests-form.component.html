@@ -4,7 +4,11 @@
   <div class="row">
     <div class="col-xs-12 col-lg-4">
       <form class="admin-page-form" [formGroup]="testForm" (submit)="add()">
-        <mat-radio-group formControlName="type" class="row" style="margin: 0 0 20px;">
+        <mat-radio-group
+          formControlName="type"
+          class="row"
+          style="margin: 0 0 20px;"
+        >
           <div class="col-xs-6">
             <mat-radio-button value="text">
               Recenzja / test - tekst
@@ -29,6 +33,41 @@
             </mat-select>
           </mat-form-field>
         </div>
+        <div *ngIf="testForm.value.type === 'video-yt'">
+          <div class="row">
+            <div class="col-xs-8">
+              <div class="admin-page-form-field">
+                <mat-form-field class="field" appearance="outline">
+                  <mat-label>Link do filmu</mat-label>
+                  <input matInput formControlName="link" />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-xs-4">
+              <a
+                href="#"
+                mat-raised-button
+                color="primary"
+                (click)="getVideoInfo($event)"
+              >
+                Pobierz dane
+              </a>
+            </div>
+          </div>
+          <div class="admin-page-form-field">
+            <mat-form-field class="field" appearance="outline">
+              <mat-label>Kanał</mat-label>
+              <mat-select formControlName="channel">
+                <mat-option
+                        *ngFor="let channel of (channels | async)"
+                        [value]="channel._id"
+                >
+                  {{ channel.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
         <div class="admin-page-form-field">
           <mat-form-field class="field" appearance="outline">
             <mat-label>Nazwa / tytuł</mat-label>
@@ -40,16 +79,10 @@
             <mat-form-field class="field" appearance="outline">
               <mat-label>Wstęp</mat-label>
               <textarea
-                      matInput
-                      formControlName="description"
-                      rows="6"
+                matInput
+                formControlName="description"
+                rows="6"
               ></textarea>
-            </mat-form-field>
-          </div>
-          <div class="admin-page-form-field">
-            <mat-form-field class="field" appearance="outline">
-              <mat-label>Zdjęcie / miniaturka</mat-label>
-              <input matInput formControlName="image" />
             </mat-form-field>
           </div>
           <div class="admin-page-form-field">
@@ -59,7 +92,12 @@
             </mat-form-field>
           </div>
         </div>
-        <div *ngIf="testForm.value.type === 'video-yt'">bbbbb</div>
+        <div class="admin-page-form-field">
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Zdjęcie / miniaturka</mat-label>
+            <input matInput formControlName="image" />
+          </mat-form-field>
+        </div>
         <div class="admin-page-form-field">
           <button mat-raised-button color="primary" type="submit">
             Dodaj test

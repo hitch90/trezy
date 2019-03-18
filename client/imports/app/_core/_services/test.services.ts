@@ -17,7 +17,7 @@ export class TestService {
       .set('part', 'snippet')
       .set('id', id)
       .set('key', environment.api_key);
-    return this.apiService.get('channels', httpParams);
+    return this.apiService.get('videos', httpParams);
   }
   add(test:Test): Observable<any> {
     return MeteorObservable.call('addTest', test);
@@ -33,5 +33,18 @@ export class TestService {
         observer.complete();
       });
     });
+  }
+  getNewest():Observable<Test> {
+    let tests$;
+    tests$ = MeteorObservable.call('getNewestTests');
+    return new Observable(observer => {
+      tests$.subscribe(data => {
+        for (let item of data) {
+          observer.next(item);
+        }
+        observer.complete();
+      });
+    });
+
   }
 }

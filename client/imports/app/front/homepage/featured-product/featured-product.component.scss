@@ -14,6 +14,7 @@
     background-position: center;
     background-size: cover;
     position: relative;
+    cursor: pointer;
   }
   .hero-name {
     font: 900 40px/1.6 var(--fontPrimary);
@@ -89,6 +90,7 @@
     background-size: cover;
     position: relative;
     height: 50%;
+    cursor: pointer;
   }
   .small-test-count {
     position: absolute;

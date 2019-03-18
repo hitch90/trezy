@@ -1,0 +1,13 @@
+<section class="products">
+  <h1 class="title">Nowe testy</h1>
+  <ul class="list">
+    <li class="item" *ngFor="let test of tests" [routerLink]="'/product/' + test.product">
+      <article class="product">
+        <figure class="cover" *ngIf="test.image">
+          <img [src]="test.image" />
+        </figure>
+        <h2 class="name">{{ test.name }}</h2>
+      </article>
+    </li>
+  </ul>
+</section>

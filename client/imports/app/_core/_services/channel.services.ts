@@ -23,3 +23,5 @@ export class ChannelService {
     return MeteorObservable.call('addChannel', channel);
   }
 }
+
+

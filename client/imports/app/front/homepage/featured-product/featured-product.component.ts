@@ -24,7 +24,6 @@ export class FeaturedProductComponent implements OnInit, OnDestroy {
   product: Product;
   category: Category;
   producer: Producer;
-  smallProductsID = ['v2fr2dGKMSFA32k3g'];
   smallProducts: Product[] = [];
   isLoading = true;
 

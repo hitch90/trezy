@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AdminModule } from './admin/admin.module';
 import {ToastrModule} from "ng6-toastr-notifications";
 import {FrontModule} from "./front/front.module";
+import {AccountsModule} from "./front/accounts/accounts-module";
 
 @NgModule({
   imports: [
@@ -15,10 +16,10 @@ import {FrontModule} from "./front/front.module";
     FormsModule,
     AppRoutingModule,
     AdminModule,
-      FrontModule,
+    FrontModule,
     BrowserAnimationsModule,
+    AccountsModule,
     ToastrModule.forRoot(),
-
   ],
   declarations: [
     AppComponent,
