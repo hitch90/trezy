@@ -43,6 +43,7 @@
     max-height: 0;
     transition: max-height 0.5s;
     overflow: hidden;
+    background: var(--backgroundDarkenColor);
     &.visible {
       max-height: calc(100vh - 75px);
     }

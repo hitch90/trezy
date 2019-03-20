@@ -3,19 +3,92 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+:root {
+  --backgroundColor: #212121;
+  --backgroundDarkenColor: #1a1a1a;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,23 +97,36 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 body {
   line-height: 1;
   font-family: 'Raleway';
-  color: #1a1a1a;
+  background: var(--backgroundColor);
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
 }
 table {
@@ -63,19 +149,10 @@ img {
   }
 }
 
-:root {
-  --fontPrimary: 'Raleway';
-  --colorPrimary: #0c5be8;
-  --textColor: #1a1a1a;
-  --textSecondaryColor: #868789;
-
-}
-
 a {
   color: var(--colorPrimary);
   text-decoration: none;
 }
-
 
 /* help classess */
 .admin-page-wrapper {
@@ -103,10 +180,6 @@ a {
   }
 }
 
-
-
-
-
 //alert
 .alert {
   min-width: 150px;
@@ -114,31 +187,31 @@ a {
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 3px;
-  &-success{
+  &-success {
     background-color: lighten(#5cb85c, 15%);
     border-color: lighten(#5cb85c, 10%);
     color: darken(#5cb85c, 15%);
   }
-  &-warning{
-    background-color: lighten(#E2A41F, 15%);
-    border-color: lighten(#E2A41F, 10%);
-    color: darken(#E2A41F, 15%);
+  &-warning {
+    background-color: lighten(#e2a41f, 15%);
+    border-color: lighten(#e2a41f, 10%);
+    color: darken(#e2a41f, 15%);
   }
-  &-danger{
+  &-danger {
     background-color: lighten(#d43f3a, 15%);
     border-color: lighten(#d43f3a, 10%);
     color: darken(#d43f3a, 15%);
   }
-  p{
+  p {
     padding: 0;
     margin: 0;
   }
-  i{
+  i {
     padding-right: 5px;
     vertical-align: middle;
     font-size: 24px;
   }
-  .close-alert{
+  .close-alert {
     -webkit-appearance: none;
     position: relative;
     float: right;
@@ -150,12 +223,48 @@ a {
     font-size: 21px;
     line-height: 1;
     font-weight: bold;
-    text-shadow: 0 1px 0 rgba(255,255,255,.7);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
     filter: alpha(opacity=40);
-    opacity: .4;
-    &:hover{
+    opacity: 0.4;
+    &:hover {
       filter: alpha(opacity=70);
-      opacity: .7;
+      opacity: 0.7;
     }
+  }
+}
+.admin-wrapper {
+  --fontPrimary: 'Raleway';
+  --colorPrimary: #0c5be8;
+  --textColor: #1a1a1a;
+  --textSecondaryColor: #868789;
+  background: #fff;
+  min-height: 100vh;
+}
+.front-wrapper {
+  --fontPrimary: 'Raleway';
+  --colorPrimary: #0c5be8;
+  --textColor: #fff;
+  --textSecondaryColor: #868789;
+  color: var(--textColor);
+
+  .mat-form-field-appearance-outline .mat-form-field-outline-end,
+  .mat-form-field-appearance-outline .mat-form-field-outline-start,
+  .mat-form-field-appearance-outline .mat-form-field-outline-gap {
+    border-color: var(--textColor) !important;
+  }
+
+  .mat-input-element,
+  .mat-form-field-label {
+    color: var(--textColor) !important;
+  }
+
+  .mat-form-field.mat-focused .mat-form-field-label {
+    color: var(--textSecondaryColor) !important;
+  }
+
+  .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float
+    .mat-form-field-label {
+    transform: translateY(-1.3em) scale(0.75);
+    width: 133.33333%;
   }
 }

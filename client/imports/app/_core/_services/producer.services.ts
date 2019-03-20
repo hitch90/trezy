@@ -30,9 +30,19 @@ export class ProducerService {
     producer$ = MeteorObservable.call('getAllProducers');
     return new Observable(observer => {
       producer$.subscribe(data => {
-        for(let item of data) {
+        for (let item of data) {
           observer.next(item);
         }
+        observer.complete();
+      });
+    });
+  }
+  countProducts(producer: string): Observable<number> {
+    let prodCount$;
+    prodCount$ = MeteorObservable.call('countByProducerProducts', producer);
+    return new Observable(observer => {
+      prodCount$.subscribe(data => {
+        observer.next(data);
         observer.complete();
       });
     });

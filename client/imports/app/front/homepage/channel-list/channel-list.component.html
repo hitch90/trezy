@@ -1,0 +1,15 @@
+<section class="channels">
+  <div class="container">
+    <h1 class="title">Kanały</h1>
+    <ul class="list">
+      <li class="item" *ngFor="let channel of channels">
+        <article class="channel">
+          <figure class="cover" *ngIf="channel.image">
+            <img [src]="channel.image" />
+          </figure>
+          <h2 class="name">{{ channel.name }}</h2>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>

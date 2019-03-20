@@ -16,8 +16,10 @@ Meteor.methods({
       _id
     });
   },
-  getChannel(_id: string):Channel {
+  getChannel(_id: string): Channel {
     return Channels.findOne({ _id });
   },
-  getAllChannels() {}
+  getAllChannels(): Channel[] {
+    return Channels.find({}).fetch();
+  }
 });

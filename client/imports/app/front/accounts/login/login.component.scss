@@ -6,7 +6,7 @@
   .container {
     max-width: 320px;
     margin: 0 auto;
-    background: #fff;
+    background: var(--backgroundDarkenColor);
     border-radius: 3px;
     padding: 30px;
   }

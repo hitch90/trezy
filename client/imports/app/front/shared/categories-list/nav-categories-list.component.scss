@@ -1,5 +1,4 @@
 .categories {
-  background: #fff;
   margin: 0 auto;
   .container {
     max-width: 1440px;
@@ -32,14 +31,28 @@
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
+  .cover {
+    height: 80px;
+    margin: 0 0 15px;
+    img {
+      display: block;
+      margin: 0 auto;
+      width: auto;
+      height: 100%;
+    }
+  }
   .item {
     color: var(--colorPrimary);
+    background: var(--backgroundColor);
+    padding: 15px;
+    border-radius: 3px;
   }
   .name {
     font: 500 16px/1.6 var(--fontPrimary);
     a {
+      color: var(--textColor);
       &:hover {
-        color: var(--textColor);
+        color: var(--colorPrimary);
       }
     }
   }

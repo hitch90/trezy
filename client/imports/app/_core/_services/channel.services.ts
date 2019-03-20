@@ -22,6 +22,18 @@ export class ChannelService {
   add(channel:Channel): Observable<any> {
     return MeteorObservable.call('addChannel', channel);
   }
+  getAll(): Observable<Channel>{
+    let channels$;
+    channels$ = MeteorObservable.call('getAllChannels');
+    return new Observable(observer => {
+      channels$.subscribe(data => {
+        for (let item of data) {
+          observer.next(item);
+        }
+        observer.complete();
+      });
+    });
+  }
 }
 
 

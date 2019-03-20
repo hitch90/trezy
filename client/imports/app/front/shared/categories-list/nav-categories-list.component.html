@@ -10,6 +10,7 @@
                   [(ngModel)]="categoriesName"
                   type="email"
                   (keyup)="searchCategories()"
+                  class="input"
           />
         </mat-form-field>
       </div>
@@ -17,11 +18,17 @@
     <ul class="list">
       <li class="item" *ngFor="let category of filterCategories">
         <article class="category">
+          <figure class="cover">
+            <img [src]="category.image" [alt]="category.name" />
+          </figure>
           <h2 class="name">
             <a [routerLink]="['/category', category._id]">{{ category.name }}</a>
           </h2>
         </article>
       </li>
     </ul>
+    <div class="alert alert-warning" *ngIf="filterCategories.length === 0">
+      Nie znaleziono żadnej kategorii
+    </div>
   </div>
 </section>

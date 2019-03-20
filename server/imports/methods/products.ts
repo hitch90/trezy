@@ -55,7 +55,10 @@ Meteor.methods({
 
   },
   getByCategoryProducts(category: string) {
-    return Products.find({ $query: { category }, $orderby: { added : -1 } }).fetch();
+    return Products.find({}, {sort: { added : -1 }, limit: 6 }).fetch();
+  },
+  countByProducerProducts(producer: string): number {
+    return Products.find({ producer }).fetch().length;
 
   }
 });

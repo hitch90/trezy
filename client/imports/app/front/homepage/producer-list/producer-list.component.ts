@@ -21,9 +21,9 @@ export class ProducerListComponent implements OnInit, OnDestroy {
         .getAll()
         .pipe(
             map(item => {
-              // this.producerService.countSubcategories(item._id).subscribe(data => {
-              //   item['count'] = data;
-              // });
+              this.producerService.countProducts(item._id).subscribe(data => {
+                item['count'] = data;
+              });
               return item;
             })
         )

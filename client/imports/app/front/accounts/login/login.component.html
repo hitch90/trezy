@@ -1,55 +1,56 @@
-<app-header></app-header>
+<div class="front-wrapper">
+  <app-header></app-header>
 
-<div class="login">
-  <div class="container">
-    <div *ngIf="isLoggedIn">
-      <div class="login-text-and-button">
-        <div class="login-display-name">{{ displayName() }}</div>
-        <a class="login-buttons-logout" (click)="logout()">Sign Out</a>
+  <div class="login">
+    <div class="container">
+      <div *ngIf="isLoggedIn">
+        <div class="login-text-and-button">
+          <div class="login-display-name">{{ displayName() }}</div>
+          <a class="login-buttons-logout" (click)="logout()">Sign Out</a>
+        </div>
       </div>
-    </div>
-    <div *ngIf="!isLoggedIn">
-      <span [hidden]="!isLoggingIn">Please wait...</span>
-      <h1 class="title" *ngIf="!isSignup">
-        Zaloguj się
-      </h1>
-      <div class="form" [hidden]="isLoggingIn">
-        <div *ngIf="message == ''">
-          <div class="login-field">
-            <mat-form-field class="field" appearance="outline">
-              <mat-label>Email</mat-label>
-              <input
-                matInput
-                [(ngModel)]="credentials.email"
-                required
-                type="email"
-              />
-            </mat-form-field>
+      <div *ngIf="!isLoggedIn">
+        <span [hidden]="!isLoggingIn">Please wait...</span>
+        <h1 class="title" *ngIf="!isSignup">Zaloguj się</h1>
+        <div class="form" [hidden]="isLoggingIn">
+          <div *ngIf="message == ''">
+            <div class="login-field">
+              <mat-form-field class="field" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input
+                  matInput
+                  [(ngModel)]="credentials.email"
+                  required
+                  type="email"
+                />
+              </mat-form-field>
+            </div>
+            <div class="login-field">
+              <mat-form-field
+                class="field"
+                appearance="outline"
+                [hidden]="isPasswordRecovery"
+              >
+                <mat-label>Hasło</mat-label>
+                <input
+                  matInput
+                  [(ngModel)]="credentials.password"
+                  required
+                  type="password"
+                />
+              </mat-form-field>
+            </div>
           </div>
-          <div class="login-field">
-            <mat-form-field
-              class="field"
-              appearance="outline"
-              [hidden]="isPasswordRecovery"
+          <div *ngIf="message == ''">
+            <button
+              *ngIf="!isPasswordRecovery && !isSignup"
+              class="login-button"
+              (click)="login()"
             >
-              <mat-label>Hasło</mat-label>
-              <input
-                matInput
-                [(ngModel)]="credentials.password"
-                required
-                type="password"
-              />
-            </mat-form-field>
+              Zaloguj się
+            </button>
           </div>
         </div>
-        <div *ngIf="message == ''">
-          <button
-            *ngIf="!isPasswordRecovery && !isSignup"
-            class="login-button"
-            (click)="login()"
-          >
-            Zaloguj się
-          </button>
       </div>
     </div>
   </div>

@@ -1,36 +1,40 @@
-<app-admin-header></app-admin-header>
-<div class="admin-page-wrapper categories-page">
-  <h3 class="admin-page-title">Lista kategorii</h3>
-  <div class="row">
-    <div class="col-xs-12 col-lg-4">
-      <button color="primary" mat-raised-button (click)="openDialog()">
-        Dodaj kategorię
-      </button>
-      <mat-list role="list">
-        <mat-list-item
-          role="listitem"
-          class="category-item"
-          *ngFor="let category of (categories | async)"
-        >
-          <button
-            mat-icon-button
-            [routerLink]="['/admin/edit-category', category._id]"
+<div class="admin-wrapper">
+  <app-admin-header></app-admin-header>
+  <div class="admin-page-wrapper categories-page">
+    <h3 class="admin-page-title">Lista kategorii</h3>
+    <div class="row">
+      <div class="col-xs-12 col-lg-4">
+        <button color="primary" mat-raised-button (click)="openDialog()">
+          Dodaj kategorię
+        </button>
+        <mat-list role="list">
+          <mat-list-item
+            role="listitem"
+            class="category-item"
+            *ngFor="let category of (categories | async)"
           >
-            <mat-icon>edit</mat-icon>
-          </button>
-          <button mat-icon-button (click)="remove(category._id)">
-            <mat-icon>delete</mat-icon>
-          </button>
-          <img
-            matListAvatar
-            [src]="category.image"
-            [alt]="category.name"
-            *ngIf="category.image"
-          />
-          <h4 matLine class="category-name">{{ category.name }}</h4>
-          <p class="category-parent" matLine *ngIf="category.parent">Kat. nadrzędna: {{ getParentName(category.parent).name }}</p>
-        </mat-list-item>
-      </mat-list>
+            <button
+              mat-icon-button
+              [routerLink]="['/admin/edit-category', category._id]"
+            >
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button (click)="remove(category._id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+            <img
+              matListAvatar
+              [src]="category.image"
+              [alt]="category.name"
+              *ngIf="category.image"
+            />
+            <h4 matLine class="category-name">{{ category.name }}</h4>
+            <p class="category-parent" matLine *ngIf="category.parent">
+              Kat. nadrzędna: {{ getParentName(category.parent).name }}
+            </p>
+          </mat-list-item>
+        </mat-list>
+      </div>
     </div>
   </div>
 </div>

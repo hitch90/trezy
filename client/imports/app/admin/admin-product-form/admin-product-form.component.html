@@ -1,4 +1,5 @@
-<app-admin-header></app-admin-header>
+<div class="admin-wrapper">
+  <app-admin-header></app-admin-header>
 <div class="admin-page-wrapper">
   <h3 class="admin-page-title">Dodaj/Edytuj produkt</h3>
   <div class="row">
@@ -68,4 +69,5 @@
       <app-admin-product-form-attributes [productId]="productForm.value._id" [productAttributes]="product.attributes" *ngIf="productForm.value._id"></app-admin-product-form-attributes>
     </div>
   </div>
+</div>
 </div>

@@ -24,6 +24,9 @@
         transform: translateY(-50%) scale(1.05);
       }
     }
+    a {
+      color: var(--textColor);
+    }
   }
   .cover {
     border-radius: 3px;
@@ -42,7 +45,7 @@
       position: absolute;
       bottom: 0;
       right: 0;
-      background: #fff;
+      background: var(--backgroundColor);
       color: var(--textColor);
       font: 600 11px/25px var(--fontPrimary);
       z-index: 3;

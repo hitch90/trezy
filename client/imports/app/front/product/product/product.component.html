@@ -1,36 +1,43 @@
-<app-header></app-header>
+<div class="front-wrapper">
+  <app-header></app-header>
 
-<section class="product" *ngIf="product">
+  <section class="product" *ngIf="product">
     <div class="container">
-        <figure class="image">
-            <img [src]="product.image" [alt]="product.name" />
-        </figure>
-        <div class="meta-data">
-            <h1 class="name">
-                {{ product.name }}
-            </h1>
-            <h2 class="producer">
-                Producent <app-product-producer [id]="product.producer"></app-product-producer> // kategoria <app-product-category [id]="product.category"></app-product-category>
-            </h2>
-            <app-product-attributes [attributes]="product.attributes"></app-product-attributes>
-        </div>
+      <figure class="image">
+        <img [src]="product.image" [alt]="product.name" />
+      </figure>
+      <div class="meta-data">
+        <h1 class="name">{{ product.name }}</h1>
+        <h2 class="producer">
+          Producent
+          <app-product-producer [id]="product.producer"></app-product-producer>
+          // kategoria
+          <app-product-category [id]="product.category"></app-product-category>
+        </h2>
+        <app-product-attributes
+          [attributes]="product.attributes"
+        ></app-product-attributes>
+      </div>
     </div>
-</section>
-<div class="product-divider"></div>
-<div class="product-tests">
+  </section>
+  <div class="product-divider"></div>
+  <div class="product-tests dark-right">
     <div class="row container">
-        <section class="col-xs-12 col-lg-6 padding-right">
-            <h2 class="product-header">
-                Recenzje
-            </h2>
-            <app-product-tests-list *ngIf="product" [id]="product._id"></app-product-tests-list>
-        </section>
-        <section class="col-xs-12 col-lg-6 padding-left">
-            <h2 class="product-header">
-                Testy video
-            </h2>
-            <app-product-tests-list *ngIf="product" [id]="product._id" type="video-yt"></app-product-tests-list>
-        </section>
+      <section class="col-xs-12 col-lg-6 padding-right zindex-3">
+        <h2 class="product-header">Recenzje</h2>
+        <app-product-tests-list
+          *ngIf="product"
+          [id]="product._id"
+        ></app-product-tests-list>
+      </section>
+      <section class="col-xs-12 col-lg-6 padding-left zindex-3">
+        <h2 class="product-header">Testy video</h2>
+        <app-product-tests-list
+          *ngIf="product"
+          [id]="product._id"
+          type="video-yt"
+        ></app-product-tests-list>
+      </section>
     </div>
-
+  </div>
 </div>

@@ -8,10 +8,11 @@ import {ProducerListComponent} from "./producer-list/producer-list.component";
 import {ProductsListComponent} from "./products-list/products-list.component";
 import {RouterModule} from "@angular/router";
 import {TestsListComponent} from "./tests-list/tests-list.component";
+import {HomepageChannelListComponent} from "./channel-list/channel-list.component";
 
 @NgModule({
   imports: [CommonModule, FrontSharedModule, RouterModule],
-  declarations: [HomepageComponent, CategoriesListComponent, FeaturedProductComponent, ProducerListComponent, ProductsListComponent, TestsListComponent],
+  declarations: [HomepageComponent, CategoriesListComponent, FeaturedProductComponent, ProducerListComponent, ProductsListComponent, TestsListComponent, HomepageChannelListComponent],
   exports: [HomepageComponent],
   providers: []
 })
