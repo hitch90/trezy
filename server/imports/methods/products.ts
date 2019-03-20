@@ -53,5 +53,9 @@ Meteor.methods({
   getNewestProducts() {
     return Products.find({ $query: {}, $orderby: { added : -1 } }, {limit: 6}).fetch();
 
+  },
+  getByCategoryProducts(category: string) {
+    return Products.find({ $query: { category }, $orderby: { added : -1 } }).fetch();
+
   }
 });

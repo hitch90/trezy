@@ -15,6 +15,22 @@
     background-size: cover;
     position: relative;
     cursor: pointer;
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      background: var(--colorPrimary);
+      opacity: 0;
+      transition: 0.3s;
+    }
+    &:hover {
+      &:after {
+        opacity: 0.3;
+      }
+    }
   }
   .hero-name {
     font: 900 40px/1.6 var(--fontPrimary);
@@ -91,6 +107,22 @@
     position: relative;
     height: 50%;
     cursor: pointer;
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      background: var(--colorPrimary);
+      opacity: 0;
+      transition: 0.3s;
+    }
+    &:hover {
+      &:after {
+        opacity: 0.3;
+      }
+    }
   }
   .small-test-count {
     position: absolute;

@@ -48,4 +48,17 @@ export class ProductService {
     });
 
   }
+  getByCategory(category):Observable<Product> {
+    let products$;
+    products$ = MeteorObservable.call('getByCategoryProducts', category);
+    return new Observable(observer => {
+      products$.subscribe(data => {
+        for (let item of data) {
+          observer.next(item);
+        }
+        observer.complete();
+      });
+    });
+
+  }
 }

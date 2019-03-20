@@ -4,12 +4,15 @@ import {FormsModule} from '@angular/forms';
 import {AuthGuard} from "./annotations";
 import {LoginComponent} from "./login/login.component";
 import {FrontSharedModule} from "../shared/front-shared.module";
+import {MatFormFieldModule, MatInputModule} from "@angular/material";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-      FrontSharedModule
+      FrontSharedModule,
+      MatInputModule,
+      MatFormFieldModule
   ],
   declarations: [
     LoginComponent

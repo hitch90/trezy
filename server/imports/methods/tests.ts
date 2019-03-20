@@ -22,6 +22,8 @@ Meteor.methods({
   },
   getNewestTests() {
     return Tests.find({ $query: {}, $orderby: { added : -1 } }, {limit: 6} ).fetch();
-
+  },
+  getCountTests(product: string):number {
+    return Tests.find({ product }).fetch().length;
   }
 });

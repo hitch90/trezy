@@ -19,11 +19,17 @@ Meteor.methods({
   getCategory(_id: string): Category {
     return Categories.findOne({ _id });
   },
-  getAllCategories() {},
+  getAllCategories() {
+    return Categories.find({}).fetch();
+
+  },
 
   getSubcategoriesCount(parent) {
     const subCat = Categories.find({ parent }).fetch();
     return subCat.length;
+  },
+  getSubcategories(parent) {
+    return Categories.find({ parent }).fetch();
   },
   getMainCategories() {
     return Categories.find({ $or: [{ parent: '' }, { parent: null }] }).fetch();

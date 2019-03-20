@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { Category } from '../../../../../../imports/models/categories';
 import {
@@ -10,13 +10,16 @@ import { map } from 'rxjs/operators';
 import { Product } from '../../../../../../imports/models/product';
 
 @Component({
-  selector: 'app-homepage-products-list',
+  selector: 'app-category-products-list',
   templateUrl: './products-list.component.html',
   styleUrls: ['./products-list.component.scss']
 })
 export class ProductsListComponent implements OnInit, OnDestroy {
+  @Input() category: string;
   products: Product[] = [];
   products$: Subscription;
+  productName: string = '';
+  filterProducts: Product[] = [];
 
   constructor(
     private categoryService: CategoryService,
@@ -26,7 +29,7 @@ export class ProductsListComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.products$ = this.productService
-      .getNewest()
+      .getByCategory(this.category)
       .pipe(
         map(item => {
           this.testService
@@ -37,11 +40,17 @@ export class ProductsListComponent implements OnInit, OnDestroy {
       )
       .subscribe(data => {
         this.products.push(data);
+        this.search();
       });
   }
   ngOnDestroy() {
     if (this.products$) {
       this.products$.unsubscribe();
     }
+  }
+  search() {
+    this.filterProducts = this.products.filter(item => {
+      return item.name.toLowerCase().includes(this.productName.toLowerCase());
+    })
   }
 }

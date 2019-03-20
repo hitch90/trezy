@@ -2,9 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Category } from '../../../../../../imports/models/categories';
 import {
-  CategoryService,
-  ProducerService,
-  ProductService
+    CategoryService,
+    ProducerService,
+    ProductService, TestService
 } from '../../../_core/_services';
 import { Product } from '../../../../../../imports/models/product';
 import { Producer } from '../../../../../../imports/models/producers';
@@ -31,7 +31,8 @@ export class FeaturedProductComponent implements OnInit, OnDestroy {
     private categoryService: CategoryService,
     private productService: ProductService,
     private producerService: ProducerService,
-    private personalizationService: PersonalizationService
+    private personalizationService: PersonalizationService,
+    private testService: TestService
   ) {}
 
   ngOnInit() {
@@ -61,6 +62,9 @@ export class FeaturedProductComponent implements OnInit, OnDestroy {
               this.producerService.get(item.producer).subscribe(data => {
                   item.producer_data = data;
               });
+              this.testService
+                  .count(item._id)
+                  .subscribe(data => (item['count'] = data));
               return item;
           }))
           .subscribe(data => {
@@ -76,6 +80,9 @@ export class FeaturedProductComponent implements OnInit, OnDestroy {
               this.producerService.get(item.producer).subscribe(data => {
                   item.producer_data = data;
               });
+              this.testService
+                  .count(item._id)
+                  .subscribe(data => (item['count'] = data));
               return item;
           }))
           .subscribe(item => {
@@ -90,6 +97,9 @@ export class FeaturedProductComponent implements OnInit, OnDestroy {
               this.producerService.get(item.producer).subscribe(data => {
                   item.producer_data = data;
               });
+              this.testService
+                  .count(item._id)
+                  .subscribe(data => (item['count'] = data));
               return item;
           }))
           .subscribe(item => {

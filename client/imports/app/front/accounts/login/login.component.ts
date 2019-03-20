@@ -6,151 +6,146 @@ var _ = require('lodash');
 declare var Package;
 
 export interface LoginCredentials {
-    email: string;
-    password: string;
+  email: string;
+  password: string;
 }
 
 @Component({
-    selector: 'app-login-buttons',
-    styleUrls: ['./login.component.scss'],
-    templateUrl: './login.component.html'
+  selector: 'app-login-buttons',
+  styleUrls: ['./login.component.scss'],
+  templateUrl: './login.component.html'
 })
 export class LoginComponent {
-    autorunComputation: Tracker.Computation;
-    currentUser: Meteor.User;
-    currentUserId: string;
-    isLoggingIn: boolean;
-    isLoggedIn: boolean;
-    services: Array<any>;
-    credentials: LoginCredentials;
-    errors: Array<string>;
-    isPasswordRecovery: boolean;
-    isSignup: boolean;
-    isDropdownOpen: boolean;
-    message: string;
+  autorunComputation: Tracker.Computation;
+  currentUser: Meteor.User;
+  currentUserId: string;
+  isLoggingIn: boolean;
+  isLoggedIn: boolean;
+  services: Array<any>;
+  credentials: LoginCredentials;
+  errors: Array<string>;
+  isPasswordRecovery: boolean;
+  isSignup: boolean;
+  isDropdownOpen: boolean;
+  message: string;
 
-    constructor(private zone: NgZone) {
-        this._initAutorun();
-        this.services = this._getLoginServices();
-        this.resetErrors();
-        this.isPasswordRecovery = false;
-        this.isSignup = false;
+  constructor(private zone: NgZone) {
+    this._initAutorun();
+    this.services = this._getLoginServices();
+    this.resetErrors();
+    this.isPasswordRecovery = false;
+    this.isSignup = false;
+    this.isDropdownOpen = false;
+    this._resetCredentialsFields();
+  }
+
+  _resetCredentialsFields() {
+    this.credentials = { email: '', password: '' };
+  }
+
+  resetErrors() {
+    this.errors = [];
+    this.message = '';
+  }
+
+  singleService(): Object {
+    let services = this._getLoginServices();
+
+    return services[0];
+  }
+
+  displayName(): string {
+    let user: any = this.currentUser;
+
+    if (!user) return '';
+
+    if (user.profile && user.profile.name) return user.profile.name;
+
+    if (user.username) return user.username;
+
+    if (user.emails && user.emails[0] && user.emails[0].address)
+      return user.emails[0].address;
+
+    return '';
+  }
+
+  login(): void {
+    this.resetErrors();
+
+    let email: string = this.credentials.email;
+    let password: string = this.credentials.password;
+
+    Meteor.loginWithPassword(email, password, error => {
+      if (error) {
+        this.errors.push(error.reason || 'Unknown error');
+      } else {
         this.isDropdownOpen = false;
         this._resetCredentialsFields();
-    }
+      }
+    });
+  }
 
-    _resetCredentialsFields() {
-        this.credentials = { email: '', password: '' };
-    }
+  recover() {
+    this.resetErrors();
 
-    resetErrors() {
-        this.errors = [];
-        this.message = "";
-    }
-
-    singleService(): Object {
-        let services = this._getLoginServices();
-
-        return services[0];
-    }
-
-    displayName(): string {
-        let user : any = this.currentUser;
-
-        if (!user)
-            return '';
-
-        if (user.profile && user.profile.name)
-            return user.profile.name;
-
-        if (user.username)
-            return user.username;
-
-        if (user.emails && user.emails[0] && user.emails[0].address)
-            return user.emails[0].address;
-
-        return '';
-    };
-
-    login(): void {
-        this.resetErrors();
-
-        let email: string = this.credentials.email;
-        let password: string = this.credentials.password;
-
-        Meteor.loginWithPassword(email, password, (error) => {
-            if (error) {
-                this.errors.push(error.reason || "Unknown error");
-            }
-            else {
-                this.isDropdownOpen = false;
-                this._resetCredentialsFields();
-            }
-        });
-    }
-
-    recover() {
-        this.resetErrors();
-
-        Accounts.forgotPassword({ email: this.credentials.email }, (error) => {
-            if (error) {
-                this.errors.push(error.reason || "Unknown error");
-            }
-            else {
-                this.message = "You will receive further instruction to you email address!";
-                this.isDropdownOpen = false;
-                this._resetCredentialsFields();
-            }
-        });
-    }
-
-    logout(): void {
-        Meteor.logout();
+    Accounts.forgotPassword({ email: this.credentials.email }, error => {
+      if (error) {
+        this.errors.push(error.reason || 'Unknown error');
+      } else {
+        this.message =
+          'You will receive further instruction to you email address!';
         this.isDropdownOpen = false;
-    }
+        this._resetCredentialsFields();
+      }
+    });
+  }
 
-    signup(): void {
-        this.resetErrors();
+  logout(): void {
+    Meteor.logout();
+    this.isDropdownOpen = false;
+  }
 
-        Accounts.createUser(this.credentials, (error) => {
-            if (error) {
-                this.errors.push(error.reason || "Unknown error");
-            }
-            else {
-                this.isDropdownOpen = false;
-                this._resetCredentialsFields();
-            }
-        });
-    }
+  signup(): void {
+    this.resetErrors();
 
-    _hasPasswordService(): boolean {
-        return !!Package['accounts-password'];
-    }
+    Accounts.createUser(this.credentials, error => {
+      if (error) {
+        this.errors.push(error.reason || 'Unknown error');
+      } else {
+        this.isDropdownOpen = false;
+        this._resetCredentialsFields();
+      }
+    });
+  }
 
-    _getLoginServices(): Array<any> {
-        let services = Package['accounts-oauth'] ? Accounts.oauth.serviceNames() : [];
-        services.sort();
+  _hasPasswordService(): boolean {
+    return !!Package['accounts-password'];
+  }
 
-        if (this._hasPasswordService())
-            services.push('password');
-    console.log(services);
-        return _.map(services, function(name) {
-            return { name: name };
-        });
-    }
+  _getLoginServices(): Array<any> {
+    let services = Package['accounts-oauth']
+      ? Accounts['oauth'].serviceNames()
+      : [];
+    services.sort();
 
-    dropdown(): boolean {
-        return this._hasPasswordService() || this._getLoginServices().length > 1;
-    }
+    if (this._hasPasswordService()) services.push('password');
+    return _.map(services, function(name) {
+      return { name: name };
+    });
+  }
 
-    _initAutorun(): void {
-        this.autorunComputation = Tracker.autorun(() => {
-            this.zone.run(() => {
-                this.currentUser = Meteor.user();
-                this.currentUserId = Meteor.userId();
-                this.isLoggingIn = Meteor.loggingIn();
-                this.isLoggedIn = !!Meteor.user();
-            })
-        });
-    }
+  dropdown(): boolean {
+    return this._hasPasswordService() || this._getLoginServices().length > 1;
+  }
+
+  _initAutorun(): void {
+    this.autorunComputation = Tracker.autorun(() => {
+      this.zone.run(() => {
+        this.currentUser = Meteor.user();
+        this.currentUserId = Meteor.userId();
+        this.isLoggingIn = Meteor.loggingIn();
+        this.isLoggedIn = !!Meteor.user();
+      });
+    });
+  }
 }

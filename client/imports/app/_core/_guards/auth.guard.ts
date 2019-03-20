@@ -1,31 +1,29 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
-import { take, tap } from 'rxjs/operators';
+import {
+  CanActivate,
+  ActivatedRouteSnapshot,
+  RouterStateSnapshot,
+  Router
+} from '@angular/router';
 import { Observable } from 'rxjs';
-import { IdentityService } from '../_services';
+import { InjectUser } from '../../front/accounts/annotations';
 
+@InjectUser('user')
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
-export class AuthGuard {
+export class AuthGuard implements CanActivate {
+  user: Meteor.User;
+  constructor(private router: Router) {}
 
-    constructor(
-        private router: Router,
-        private identityService: IdentityService
-    ) {}
-
-    canActivate(
-        route: ActivatedRouteSnapshot,
-        state: RouterStateSnapshot
-    ): Observable<boolean> {
-        return this.identityService.isAuthenticated.pipe(
-            take(1),
-            tap(auth => {
-                if (!auth) {
-                    this.router.navigateByUrl('/login');
-                }
-            })
-        );
+  canActivate(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ): Observable<boolean> | Promise<boolean> | boolean {
+    if (!this.user._id) {
+      this.router.navigate(['/login']);
+      return false;
     }
-
+    return true;
+  }
 }

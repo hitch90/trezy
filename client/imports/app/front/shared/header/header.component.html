@@ -1,25 +1,28 @@
 <header class="header">
-
-    <div class="wrapper">
-        <div class="logo">
-            <a routerLink="/">Logo</a>
-        </div>
-        <ul class="nav">
-            <li class="item">
-                <a href="#">
-                    Kategorie
-                    <mat-icon>arrow_drop_down</mat-icon>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#">
-                    Kanały
-                    <mat-icon>arrow_drop_down</mat-icon>
-                </a>
-            </li>
-            <li class="item">
-               <a routerLink="login">Login</a>
-            </li>
-        </ul>
-    </div>
+  <div class="wrapper">
+    <div class="logo"><a routerLink="/">Logo</a></div>
+    <ul class="nav">
+      <li class="item">
+        <a href="#" (click)="toggleCat($event)">
+          Kategorie
+          <mat-icon>arrow_drop_down</mat-icon>
+        </a>
+      </li>
+      <li class="item">
+        <a href="#">
+          Kanały
+          <mat-icon>arrow_drop_down</mat-icon>
+        </a>
+      </li>
+      <li class="item">
+        <a routerLink="/login" *ngIf="!user">Login</a>
+        <a routerLink="/login" *ngIf="user">
+          Zalogowany jako {{ displayName() }}
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="categories-box" [ngClass]="{ visible: showCategories }">
+    <app-nav-categories-list></app-nav-categories-list>
+  </div>
 </header>

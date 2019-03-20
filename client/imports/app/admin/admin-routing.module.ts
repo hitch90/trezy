@@ -10,72 +10,73 @@ import {AdminProducersComponent} from "./admin-producers/admin-producers.compone
 import {AdminAttributesComponent} from "./admin-attributes/admin-attributes.component";
 import {AdminTestsComponent} from "./admin-tests/admin-tests.component";
 import {AdminTestsFormComponent} from "./admin-tests-form/admin-tests-form.component";
+import {AuthGuard} from "../_core/_guards";
 
 const routes: Routes = [
   {
     path: 'admin',
     component: AdminHomepageComponent,
-    canActivate: []
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin/add-channel',
     component: AdminChannelFormComponent,
-    canActivate: []
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin/edit-channel/:id',
     component: AdminChannelFormComponent,
-    canActivate: []
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin/channels',
     component: AdminChannelsComponent,
-    canActivate: []
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin/categories',
     component: AdminCategoriesComponent,
-    canActivate: []
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin/attributes',
     component: AdminAttributesComponent,
-    canActivate: []
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin/producers',
     component: AdminProducersComponent,
-    canActivate: []
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin/add-product',
     component: AdminProductFormComponent,
-    canActivate: []
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin/tests',
     component: AdminTestsComponent,
-    canActivate: []
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin/add-test',
     component: AdminTestsFormComponent,
-    canActivate: []
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin/edit-test/:id',
     component: AdminTestsFormComponent,
-    canActivate: []
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin/products',
     component: AdminProductsComponent,
-    canActivate: []
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin/edit-product/:id',
     component: AdminProductFormComponent,
-    canActivate: []
+    canActivate: [AuthGuard]
   }
 ];
 

@@ -1,0 +1,27 @@
+<section class="categories">
+  <div class="container">
+    <div class="header">
+      <h1 class="title">Lista kategorii</h1>
+      <div class="search">
+        <mat-form-field class="field" appearance="outline">
+          <mat-label>Wyszukaj kategorię</mat-label>
+          <input
+                  matInput
+                  [(ngModel)]="categoriesName"
+                  type="email"
+                  (keyup)="searchCategories()"
+          />
+        </mat-form-field>
+      </div>
+    </div>
+    <ul class="list">
+      <li class="item" *ngFor="let category of filterCategories">
+        <article class="category">
+          <h2 class="name">
+            <a [routerLink]="['/category', category._id]">{{ category.name }}</a>
+          </h2>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>

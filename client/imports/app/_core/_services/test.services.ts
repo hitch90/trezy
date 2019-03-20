@@ -45,6 +45,15 @@ export class TestService {
         observer.complete();
       });
     });
-
+  }
+  count(product: string):Observable<number> {
+    let tests$;
+    tests$ = MeteorObservable.call('getCountTests', product);
+    return new Observable(observer => {
+      tests$.subscribe(data => {
+        observer.next(data);
+        observer.complete();
+      });
+    });
   }
 }

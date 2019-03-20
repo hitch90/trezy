@@ -27,9 +27,33 @@ export class CategoryService {
       });
     });
   }
+  getAll(): Observable<Category> {
+    let categories$;
+    categories$ = MeteorObservable.call('getAllCategories',);
+    return new Observable(observer => {
+      categories$.subscribe(data => {
+        for (let item of data) {
+          observer.next(item);
+        }
+        observer.complete();
+      });
+    });
+  }
   getMain(): Observable<any> {
     let categories$;
     categories$ = MeteorObservable.call('getMainCategories');
+    return new Observable(observer => {
+      categories$.subscribe(data => {
+        for (let item of data) {
+          observer.next(item);
+        }
+        observer.complete();
+      });
+    });
+  }
+  getSub(parent: string): Observable<any> {
+    let categories$;
+    categories$ = MeteorObservable.call('getSubcategories', parent);
     return new Observable(observer => {
       categories$.subscribe(data => {
         for (let item of data) {

@@ -1,0 +1,15 @@
+<app-header></app-header>
+
+<section *ngIf="category" class="category">
+    <div class="container">
+        <div class="category-meta">
+            <figure *ngIf="category.image" class="icon">
+                <img [src]="category.image" [alt]="category.name" />
+            </figure>
+            <h1 class="name">{{ category.name }}</h1>
+        </div>
+    </div>
+</section>
+
+<app-category-categories-list *ngIf="subcategories.length" [items]="subcategories"></app-category-categories-list>
+<app-category-products-list  *ngIf="category" [category]="category._id"></app-category-products-list>

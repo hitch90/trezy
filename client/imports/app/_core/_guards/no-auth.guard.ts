@@ -10,23 +10,23 @@ import {IdentityService} from '../_services';
 })
 export class NoAuthGuard implements CanActivate {
   constructor(
-    private router: Router,
-    private identityService: IdentityService
+      private router: Router,
+      private identityService: IdentityService
   ) {
   }
 
   canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
+      route: ActivatedRouteSnapshot,
+      state: RouterStateSnapshot
   ): Observable<boolean> {
     return this.identityService.isAuthenticated.pipe(
-      take(1),
-      map(isAuth => !isAuth),
-      tap(noauth => {
-        if (!noauth) {
-          this.router.navigateByUrl('/');
-        }
-      })
+        take(1),
+        map(isAuth => !isAuth),
+        tap(noauth => {
+          if (!noauth) {
+            this.router.navigateByUrl('/');
+          }
+        })
     );
   }
 }

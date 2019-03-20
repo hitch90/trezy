@@ -1,7 +1,11 @@
 <section class="categories">
   <h1 class="title">Kategorie</h1>
   <ul class="list">
-    <li class="item" *ngFor="let category of categories">
+    <li
+      class="item"
+      *ngFor="let category of categories"
+      [routerLink]="['/category', category._id]"
+    >
       <article class="category">
         <figure class="cover" *ngIf="category.image">
           <img [src]="category.image" />
