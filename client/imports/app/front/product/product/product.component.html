@@ -14,9 +14,13 @@
           // kategoria
           <app-product-category [id]="product.category"></app-product-category>
         </h2>
-        <app-product-attributes
-          [attributes]="product.attributes"
-        ></app-product-attributes>
+        <h3 class="price" *ngIf="product.price">
+          <span>orientacyjna cena</span>
+          {{ product.price }}
+        </h3>
+        <!--<app-product-attributes-->
+          <!--[attributes]="product.attributes"-->
+        <!--&gt;</app-product-attributes>-->
       </div>
     </div>
   </section>

@@ -20,7 +20,22 @@
           Zalogowany jako {{ displayName() }}
         </a>
       </li>
+      <li class="item">
+        <a routerLink="/admin" *ngIf="user">Admin</a>
+      </li>
     </ul>
+    <div class="search">
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Wyszukaj produkt lub test</mat-label>
+        <input
+                matInput
+                [(ngModel)]="query"
+                type="email"
+                (keyup)="search()"
+                class="input"
+        />
+      </mat-form-field>
+    </div>
   </div>
   <div class="categories-box" [ngClass]="{ visible: showCategories }">
     <app-nav-categories-list></app-nav-categories-list>

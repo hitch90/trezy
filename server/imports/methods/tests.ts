@@ -15,6 +15,9 @@ Meteor.methods({
   getTestsForProduct(product: string, type: string) {
     return Tests.find({ product, type }).fetch();
   },
+  getTestsForChannel(channel: string):Test[] {
+    return Tests.find({ channel }).fetch();
+  },
   removeTest(_id: string) {
     Tests.remove({
       _id

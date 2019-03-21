@@ -34,6 +34,18 @@ export class TestService {
       });
     });
   }
+  getForChannel(product:string):Observable<Test> {
+    let tests$;
+    tests$ = MeteorObservable.call('getTestsForChannel', product);
+    return new Observable(observer => {
+      tests$.subscribe(data => {
+        for (let item of data) {
+          observer.next(item);
+        }
+        observer.complete();
+      });
+    });
+  }
   getNewest():Observable<Test> {
     let tests$;
     tests$ = MeteorObservable.call('getNewestTests');

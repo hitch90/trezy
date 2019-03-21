@@ -1,0 +1,19 @@
+<div class="front-wrapper">
+  <app-header></app-header>
+
+  <section *ngIf="channel" class="channel">
+    <div class="container">
+      <div class="meta">
+        <figure *ngIf="channel.image" class="icon">
+          <img [src]="channel.image" [alt]="channel.name" />
+        </figure>
+        <h1 class="name">{{ channel.name }}</h1>
+      </div>
+    </div>
+  </section>
+
+  <app-category-products-list
+    *ngIf="channel"
+    [channel]="channel._id"
+  ></app-category-products-list>
+</div>

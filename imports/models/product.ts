@@ -7,4 +7,5 @@ export interface Product {
   producer?: string;
   attributes?: object[];
   added: number;
+  price?: string;
 }

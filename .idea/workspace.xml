@@ -2,42 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2564a992-0aab-4bfc-88b3-5bd0a2cb206e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/imports/app/front/channel/channel-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/imports/app/front/channel/channel.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/imports/app/front/channel/channel/channel.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/imports/app/front/channel/channel/channel.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/imports/app/front/channel/channel/channel.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/imports/app/front/channel/products-list/products-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/imports/app/front/channel/products-list/products-list.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/imports/app/front/channel/products-list/products-list.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/_core/_guards/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/_core/_guards/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.meteor/packages" beforeDir="false" afterPath="$PROJECT_DIR$/.meteor/packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.meteor/release" beforeDir="false" afterPath="$PROJECT_DIR$/.meteor/release" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.meteor/versions" beforeDir="false" afterPath="$PROJECT_DIR$/.meteor/versions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/imports/app/_core/_services/channel.services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/_core/_services/channel.services.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/_core/_services/producer.services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/_core/_services/producer.services.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/admin/admin-attributes/admin-attributes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/admin/admin-attributes/admin-attributes.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/admin/admin-categories/admin-categories.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/admin/admin-categories/admin-categories.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/admin/admin-channel-form/admin-channel-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/admin/admin-channel-form/admin-channel-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/admin/admin-channels/admin-channels.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/admin/admin-channels/admin-channels.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/admin/admin-homepage/admin-homepage/admin-homepage.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/admin/admin-homepage/admin-homepage/admin-homepage.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/admin/admin-producers/admin-producers.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/admin/admin-producers/admin-producers.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/imports/app/_core/_services/product.services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/_core/_services/product.services.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/imports/app/_core/_services/test.services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/_core/_services/test.services.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/imports/app/admin/admin-product-form/admin-product-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/admin/admin-product-form/admin-product-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/admin/admin-products/admin-products.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/admin/admin-products/admin-products.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/admin/admin-tests-form/admin-tests-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/admin/admin-tests-form/admin-tests-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/admin/admin-tests/admin-tests.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/admin/admin-tests/admin-tests.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/front/accounts/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/accounts/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/front/accounts/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/accounts/login/login.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/front/category/categories-list/categories-list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/category/categories-list/categories-list.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/front/category/category/category.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/category/category/category.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/front/homepage/homepage.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/homepage/homepage.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/front/homepage/homepage/homepage.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/homepage/homepage/homepage.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/front/homepage/producer-list/producer-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/homepage/producer-list/producer-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/front/homepage/producer-list/producer-list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/homepage/producer-list/producer-list.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/front/homepage/producer-list/producer-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/homepage/producer-list/producer-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/front/homepage/tests-list/tests-list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/homepage/tests-list/tests-list.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/imports/app/admin/admin-product-form/admin-product-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/admin/admin-product-form/admin-product-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/imports/app/admin/shared/admin-header/admin-header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/admin/shared/admin-header/admin-header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/imports/app/front/front.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/front.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/imports/app/front/product/product/product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/product/product/product.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/imports/app/front/product/product/product.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/product/product/product.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/front/product/tests-list/tests-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/product/tests-list/tests-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/front/product/tests-list/tests-list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/product/tests-list/tests-list.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/front/shared/categories-list/nav-categories-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/shared/categories-list/nav-categories-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/imports/app/front/shared/categories-list/nav-categories-list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/shared/categories-list/nav-categories-list.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/imports/methods/channels.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/imports/methods/channels.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/models/product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/imports/models/product.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/imports/methods/products.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/imports/methods/products.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/imports/methods/tests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/imports/methods/tests.ts" afterDir="false" />
     </list>
@@ -54,58 +44,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.ts">
+        <entry file="file://$PROJECT_DIR$/client/imports/app/front/channel/products-list/products-list.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#0#61#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/imports/app/front/channel/products-list/products-list.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="21" selection-start-column="16" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.scss">
+        <entry file="file://$PROJECT_DIR$/client/imports/app/front/channel/products-list/products-list.component.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+            <state relative-caret-position="300">
+              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.html">
+        <entry file="file://$PROJECT_DIR$/client/imports/app/front/channel/channel/channel.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/imports/app/_core/_services/channel.services.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/imports/methods/channels.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/imports/app/_core/_services/product.services.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="47" column="7" selection-start-line="38" selection-start-column="4" selection-end-line="47" selection-end-column="7" />
+            <state relative-caret-position="240">
+              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -156,24 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/imports/methods/categories.ts" />
-        <option value="$PROJECT_DIR$/client/imports/app/_core/_services/category.services.ts" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/homepage/categories-list/categories-list.component.ts" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/category/categories-list/categories-list.component.ts" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/category/category/category.component.ts" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/category/categories-list/categories-list.component.html" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/product/product/product.component.ts" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/homepage/products-list/products-list.component.ts" />
-        <option value="$PROJECT_DIR$/client/imports/app/_core/_services/product.services.ts" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/category/products-list/products-list.component.ts" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/category/category.module.ts" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/category/products-list/products-list.component.scss" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/category/products-list/products-list.component.html" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.html" />
-        <option value="$PROJECT_DIR$/client/imports/app/_core/_guards/auth.guard.ts" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/homepage/producer-list/producer-list.component.scss" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/category/categories-list/categories-list.component.scss" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.scss" />
         <option value="$PROJECT_DIR$/client/imports/app/front/accounts/login/login.component.scss" />
         <option value="$PROJECT_DIR$/client/imports/app/admin/admin-attributes/admin-attributes.component.html" />
         <option value="$PROJECT_DIR$/client/imports/app/admin/admin-categories/admin-categories.component.html" />
@@ -181,7 +132,6 @@
         <option value="$PROJECT_DIR$/client/imports/app/admin/admin-channels/admin-channels.component.html" />
         <option value="$PROJECT_DIR$/client/imports/app/admin/admin-homepage/admin-homepage/admin-homepage.component.html" />
         <option value="$PROJECT_DIR$/client/imports/app/admin/admin-producers/admin-producers.component.html" />
-        <option value="$PROJECT_DIR$/client/imports/app/admin/admin-product-form/admin-product-form.component.html" />
         <option value="$PROJECT_DIR$/client/imports/app/admin/admin-products/admin-products.component.html" />
         <option value="$PROJECT_DIR$/client/imports/app/admin/admin-tests/admin-tests.component.html" />
         <option value="$PROJECT_DIR$/client/imports/app/admin/admin-tests-form/admin-tests-form.component.html" />
@@ -190,23 +140,42 @@
         <option value="$PROJECT_DIR$/client/imports/app/_core/_services/producer.services.ts" />
         <option value="$PROJECT_DIR$/client/imports/app/front/homepage/producer-list/producer-list.component.ts" />
         <option value="$PROJECT_DIR$/client/imports/app/front/homepage/producer-list/producer-list.component.html" />
-        <option value="$PROJECT_DIR$/server/imports/methods/tests.ts" />
-        <option value="$PROJECT_DIR$/server/imports/methods/products.ts" />
         <option value="$PROJECT_DIR$/client/imports/app/front/homepage/tests-list/tests-list.component.scss" />
         <option value="$PROJECT_DIR$/client/styles.scss" />
         <option value="$PROJECT_DIR$/client/imports/app/front/product/tests-list/tests-list.component.scss" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/product/product/product.component.html" />
-        <option value="$PROJECT_DIR$/client/imports/app/front/product/product/product.component.scss" />
         <option value="$PROJECT_DIR$/client/imports/app/front/product/tests-list/tests-list.component.html" />
         <option value="$PROJECT_DIR$/client/imports/app/front/shared/categories-list/nav-categories-list.component.html" />
         <option value="$PROJECT_DIR$/client/imports/app/front/shared/categories-list/nav-categories-list.component.scss" />
         <option value="$PROJECT_DIR$/server/imports/methods/channels.ts" />
-        <option value="$PROJECT_DIR$/client/imports/app/_core/_services/channel.services.ts" />
         <option value="$PROJECT_DIR$/client/imports/app/front/homepage/homepage.module.ts" />
         <option value="$PROJECT_DIR$/client/imports/app/front/homepage/homepage/homepage.component.html" />
         <option value="$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.ts" />
         <option value="$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.scss" />
+        <option value="$PROJECT_DIR$/client/imports/app/admin/shared/admin-header/admin-header.component.html" />
+        <option value="$PROJECT_DIR$/client/imports/app/admin/admin-product-form/admin-product-form.component.html" />
+        <option value="$PROJECT_DIR$/client/imports/app/admin/admin-product-form/admin-product-form.component.ts" />
+        <option value="$PROJECT_DIR$/imports/models/product.ts" />
+        <option value="$PROJECT_DIR$/client/imports/app/front/product/product/product.component.scss" />
+        <option value="$PROJECT_DIR$/client/imports/app/front/product/product/product.component.html" />
+        <option value="$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.html" />
+        <option value="$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.ts" />
+        <option value="$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.scss" />
+        <option value="$PROJECT_DIR$/client/imports/app/front/channel/category.module.ts" />
+        <option value="$PROJECT_DIR$/client/imports/app/front/channel/channel.module.ts" />
+        <option value="$PROJECT_DIR$/client/imports/app/front/channel/channel-routing.module.ts" />
+        <option value="$PROJECT_DIR$/client/imports/app/_core/_services/channel.services.ts" />
+        <option value="$PROJECT_DIR$/client/imports/app/front/channel/channel/channel.component.ts" />
+        <option value="$PROJECT_DIR$/client/imports/app/front/channel/channel/channel.component.scss" />
         <option value="$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.html" />
+        <option value="$PROJECT_DIR$/client/imports/app/front/front.module.ts" />
+        <option value="$PROJECT_DIR$/client/imports/app/front/channel/channel/channel.component.html" />
+        <option value="$PROJECT_DIR$/server/imports/methods/tests.ts" />
+        <option value="$PROJECT_DIR$/server/imports/methods/products.ts" />
+        <option value="$PROJECT_DIR$/client/imports/app/_core/_services/product.services.ts" />
+        <option value="$PROJECT_DIR$/client/imports/app/_core/_services/test.services.ts" />
+        <option value="$PROJECT_DIR$/client/imports/app/front/channel/products-list/products-list.component.ts" />
+        <option value="$PROJECT_DIR$/client/imports/app/front/channel/products-list/products-list.component.html" />
+        <option value="$PROJECT_DIR$/client/imports/app/front/channel/products-list/products-list.component.scss" />
       </list>
     </option>
   </component>
@@ -252,16 +221,7 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="imports" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="_core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="autodium" type="b2602c69:ProjectViewProjectNode" />
-              <item name="autodium" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="imports" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="_core" type="462c0819:PsiDirectoryNode" />
-              <item name="_services" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="autodium" type="b2602c69:ProjectViewProjectNode" />
@@ -278,7 +238,7 @@
               <item name="imports" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="homepage" type="462c0819:PsiDirectoryNode" />
+              <item name="channel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="autodium" type="b2602c69:ProjectViewProjectNode" />
@@ -287,8 +247,18 @@
               <item name="imports" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="homepage" type="462c0819:PsiDirectoryNode" />
-              <item name="channel-list" type="462c0819:PsiDirectoryNode" />
+              <item name="channel" type="462c0819:PsiDirectoryNode" />
+              <item name="channel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autodium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autodium" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="imports" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="channel" type="462c0819:PsiDirectoryNode" />
+              <item name="products-list" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="autodium" type="b2602c69:ProjectViewProjectNode" />
@@ -298,20 +268,8 @@
             <path>
               <item name="autodium" type="b2602c69:ProjectViewProjectNode" />
               <item name="autodium" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="autodium" type="b2602c69:ProjectViewProjectNode" />
-              <item name="autodium" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="imports" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="autodium" type="b2602c69:ProjectViewProjectNode" />
-              <item name="autodium" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="imports" type="462c0819:PsiDirectoryNode" />
-              <item name="methods" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -331,9 +289,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/imports/app/front" />
       <recent name="$PROJECT_DIR$/client/imports/app/front/homepage" />
       <recent name="$PROJECT_DIR$/client/imports/app/front/category" />
-      <recent name="$PROJECT_DIR$/client/imports/app/front" />
       <recent name="$PROJECT_DIR$/client/imports/app/front/shared" />
       <recent name="$PROJECT_DIR$/client/imports/app/front/product" />
     </key>
@@ -388,198 +346,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/category/products-list/products-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/category/category.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/category/products-list/products-list.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/category/products-list/products-list.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="27" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/admin/admin-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/_core/_guards/auth.guard.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/models/tests.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/homepage/producer-list/producer-list.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/category/categories-list/categories-list.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/_core/_services/test.services.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/homepage/tests-list/tests-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/admin/admin-attributes/admin-attributes.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/admin/admin-categories/admin-categories.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="8" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/admin/admin-channel-form/admin-channel-form.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/admin/admin-channels/admin-channels.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/admin/admin-homepage/admin-homepage/admin-homepage.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/admin/admin-producers/admin-producers.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/admin/admin-product-form/admin-product-form.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="72" column="6" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/admin/admin-products/admin-products.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/category/category/category.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/accounts/login/login.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/accounts/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/accounts/login/login.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/imports/app/admin/admin-tests/admin-tests.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -598,13 +364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="39" column="15" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/imports/methods/products.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="63" column="3" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -629,30 +388,6 @@
           <folding>
             <element signature="e#0#61#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/imports/methods/tests.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="59" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/product/product/product.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/product/product/product.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -694,50 +429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/shared/categories-list/nav-categories-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/shared/categories-list/nav-categories-list.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/shared/categories-list/nav-categories-list.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/_core/_services/product.services.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="47" column="7" selection-start-line="38" selection-start-column="4" selection-end-line="47" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/imports/methods/channels.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/_core/_services/channel.services.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/imports/app/front/homepage/homepage.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -755,6 +446,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/category/products-list/products-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/shared/categories-list/nav-categories-list.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/shared/categories-list/nav-categories-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -765,17 +486,259 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.html">
+    <entry file="file://$PROJECT_DIR$/client/imports/app/admin/shared/admin-header/admin-header.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="31" />
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.scss">
+    <entry file="file://$PROJECT_DIR$/imports/models/product.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/product/product/product.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/admin/admin-product-form/admin-product-form.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="91" column="39" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/product/product/product.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/shared/categories-list/nav-categories-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/category/category/category.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/category/category/category.component.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/category/category/category.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/shared/header/header.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/channel/channel.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/_core/_services/category.services.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" selection-start-line="19" selection-end-line="28" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/_core/_services/channel.services.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/channel/channel/channel.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/imports/methods/channels.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/channel/channel/channel.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/category/categories-list/categories-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/front.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/front-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/channel/channel-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/homepage/channel-list/channel-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="73" selection-start-line="4" selection-start-column="73" selection-end-line="4" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/channel/channel/channel.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/imports/methods/tests.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/admin/admin-product-form/admin-product-form.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/imports/methods/products.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/_core/_services/product.services.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="61" column="3" selection-start-line="61" selection-start-column="3" selection-end-line="61" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/_core/_services/test.services.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="36" column="15" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/channel/products-list/products-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/channel/products-list/products-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/imports/app/front/channel/products-list/products-list.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
         </state>
       </provider>
     </entry>

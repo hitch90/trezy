@@ -59,6 +59,5 @@ export class ProductService {
         observer.complete();
       });
     });
-
   }
 }

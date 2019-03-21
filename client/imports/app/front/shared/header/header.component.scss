@@ -4,11 +4,10 @@
   .wrapper {
     max-width: 1440px;
     margin: 0 auto;
-    display: flex;
     align-items: center;
     height: 75px;
-
-    //border-bottom: 1px solid var(--colorPrimary);
+    display: grid;
+    grid-template-columns: 1fr 7fr 4fr;
   }
   .logo {
     color: #fff;
@@ -46,6 +45,19 @@
     background: var(--backgroundDarkenColor);
     &.visible {
       max-height: calc(100vh - 75px);
+    }
+  }
+
+}
+::ng-deep {
+  .search {
+    padding: 10px 0;
+    .field {
+      width: 100%;
+    }
+    .mat-form-field-wrapper {
+      margin: 0;
+      padding: 0;
     }
   }
 }

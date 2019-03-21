@@ -34,6 +34,16 @@ export class ChannelService {
       });
     });
   }
+  get(id:string): Observable<Channel> {
+    let channel$;
+    channel$ = MeteorObservable.call('getChannel', id);
+    return new Observable(observer => {
+      channel$.subscribe(data => {
+        observer.next(data);
+        observer.complete();
+      });
+    });
+  }
 }
 
 

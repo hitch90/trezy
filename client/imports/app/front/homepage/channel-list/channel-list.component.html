@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="title">Kanały</h1>
     <ul class="list">
-      <li class="item" *ngFor="let channel of channels">
+      <li class="item" *ngFor="let channel of channels" [routerLink]="['/channel', channel._id]">
         <article class="channel">
           <figure class="cover" *ngIf="channel.image">
             <img [src]="channel.image" />

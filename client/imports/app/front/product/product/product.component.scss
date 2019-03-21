@@ -32,6 +32,13 @@
     color: #fff;
     opacity: 0.8;
   }
+  .price {
+    padding: 10px 0;
+    font: 900 22px/22px var(--fontPrimary);
+    span {
+      font: 400 12px/22px var(--fontPrimary);
+    }
+  }
 }
 
 .product-tests {

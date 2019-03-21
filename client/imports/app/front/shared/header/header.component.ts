@@ -11,6 +11,7 @@ import {InjectUser} from "../../accounts/annotations";
 export class HeaderComponent implements OnInit {
   user: Meteor.User;
   showCategories = false;
+  query: string;
   constructor() {}
 
   ngOnInit() {}
@@ -32,5 +33,8 @@ export class HeaderComponent implements OnInit {
   toggleCat(ev) {
     ev.preventDefault();
     this.showCategories = !this.showCategories;
+  }
+  search() {
+
   }
 }

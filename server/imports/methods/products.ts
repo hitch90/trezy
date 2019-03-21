@@ -6,7 +6,7 @@ Meteor.methods({
   addProduct(product: Product): boolean {
     const isExist = Products.findOne({ name: product['name'] });
     if (!isExist) {
-      Products.insert({...product, added: Date.now() });
+      Products.insert({ ...product, added: Date.now() });
       return true;
     }
     return false;
@@ -51,14 +51,15 @@ Meteor.methods({
   },
   getAllProducts() {},
   getNewestProducts() {
-    return Products.find({ $query: {}, $orderby: { added : -1 } }, {limit: 6}).fetch();
-
+    return Products.find(
+      { $query: {}, $orderby: { added: -1 } },
+      { limit: 6 }
+    ).fetch();
   },
-  getByCategoryProducts(category: string) {
-    return Products.find({}, {sort: { added : -1 }, limit: 6 }).fetch();
+  getByCategoryProducts(category: string): Product[] {
+    return Products.find({ category }).fetch();
   },
   countByProducerProducts(producer: string): number {
     return Products.find({ producer }).fetch().length;
-
   }
 });
