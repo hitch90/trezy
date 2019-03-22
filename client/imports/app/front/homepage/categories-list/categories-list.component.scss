@@ -1,27 +1,53 @@
+@import '../../shared/styles/mixins';
+
 .categories {
   max-width: 1440px;
-  margin: 0 auto 50px;
+  margin: 0 auto 30px;
+  padding: 0 10px;
+  @include breakpoint(tablet_small) {
+    margin: 0 auto 50px;
+  }
+  @include breakpoint('1460px') {
+    padding: 0;
+  }
   .title {
-    font: 900 28px/1.6 var(--fontPrimary);
+    font: 900 20px/1.6 var(--fontPrimary);
     padding: 0 0 30px;
     margin: 0;
     color: var(--textColor);
+    @include breakpoint(tablet_small) {
+      font: 900 28px/1.6 var(--fontPrimary);
+    }
   }
   .list {
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    @include breakpoint(tablet_small) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+    }
+    @include breakpoint(desktop_small) {
+      grid-template-columns: repeat(6, 1fr);
+    }
   }
   .item {
     color: var(--textColor);
     cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+    @include breakpoint(desktop_small) {
+      padding: 0;
+      border-bottom: 0;
+    }
     &:hover {
       color: var(--colorPrimary);
       img {
-        transform: scale(1.05);
+        transform: scale(1.05) translateY(-50%);
       }
     }
   }
@@ -29,14 +55,26 @@
     border-radius: 3px;
     overflow: hidden;
     margin: 0 0 15px;
-    height: 160px;
+    height: 95px;
+    @include breakpoint(tablet_small) {
+      height: 100px;
+    }
+    @include breakpoint(desktop_small) {
+      height: 160px;
+    }
     img {
       transition: 0.3s;
       display: block;
+      transform: translateY(-50%);
+      position: relative;
+      top: 50%;
     }
   }
   .name {
-    font: 500 16px/1.6 var(--fontPrimary);
+    font: 500 13px/1.6 var(--fontPrimary);
+    @include breakpoint(tablet_small) {
+      font: 500 16px/1.6 var(--fontPrimary);
+    }
   }
   .categories-count {
     font: 300 13px/1.6 var(--fontPrimary);

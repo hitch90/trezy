@@ -1,25 +1,46 @@
+@import '../../shared/styles/mixins';
+
 .producers {
-  margin: 0 auto 50px;
+  margin: 0 auto 30px;
   background: var(--backgroundDarkenColor);
-  padding: 50px 0;
+  padding: 30px 10px;
+  @include breakpoint(tablet_small) {
+    padding: 50px 10px;
+    margin: 0 auto 50px;
+  }
+  @include breakpoint('1460px') {
+    padding: 50px 0;
+  }
   .container {
     max-width: 1440px;
     margin: 0 auto;
     width: 100%;
   }
   .title {
-    font: 900 28px/1.6 var(--fontPrimary);
+    font: 900 20px/1.6 var(--fontPrimary);
     padding: 0 0 30px;
     margin: 0;
     color: var(--textColor);
-  }
+    @include breakpoint(tablet_small) {
+      font: 900 28px/1.6 var(--fontPrimary);
+
+    }
+    }
   .list {
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    @include breakpoint(tablet_small) {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+    }
+    @include breakpoint(desktop_small) {
+      grid-template-columns: repeat(10, 1fr);
+    }
   }
   .item {
     color: var(--textColor);

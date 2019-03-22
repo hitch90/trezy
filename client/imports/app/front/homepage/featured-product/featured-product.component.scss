@@ -1,20 +1,30 @@
+@import '../../shared/styles/mixins';
+
 .featured-products {
   background: var(--colorPrimary);
-  margin: 0 0 50px;
+  margin: 0 0 30px;
+  @include breakpoint(tablet_small) {
+    margin: 0 0 50px;
+  }
   .container {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 30px 0 0;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    @include breakpoint(tablet_small) {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
   }
   .hero {
-    height: 480px;
+    height: 250px;
     background-position: center;
     background-size: cover;
     position: relative;
     cursor: pointer;
+    @include breakpoint(tablet_small) {
+      height: 480px;
+    }
     &:after {
       position: absolute;
       top: 0;
@@ -33,21 +43,35 @@
     }
   }
   .hero-name {
-    font: 900 40px/1.6 var(--fontPrimary);
     color: #fff;
-    position: absolute;
-    bottom: 30px;
+    font: 900 24px/1.6 var(--fontPrimary);
     letter-spacing: 1px;
-    left: 30px;
-    right: 30px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    @include breakpoint(tablet_small) {
+      bottom: 30px;
+      left: 30px;
+      right: 30px;
+      font: 900 40px/1.6 var(--fontPrimary);
+    }
   }
   .hero-test-count {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    background: rgba(255, 255, 255, 0.5);
-    color: var(--textColor);
-    font: 400 12px/1.2 var(--fontPrimary);
+    display: none;
+    @include breakpoint(tablet_small) {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.5);
+      color: var(--textColor);
+      font: 400 12px/1.2 var(--fontPrimary);
+      bottom: 30px;
+      right: 30px;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      display: block;
+      text-align: center;
+    }
     p {
       position: relative;
       top: 50%;
@@ -58,20 +82,23 @@
       font-size: 18px;
       display: block;
     }
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    text-align: center;
   }
   .hero-producer,
   .small-producer {
     position: absolute;
-    top: 30px;
-    left: 30px;
-    width: 50px;
-    height: 50px;
+    top: 10px;
+    left: 10px;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
     background: var(--colorPrimary);
     border-radius: 50%;
+    @include breakpoint(tablet_small) {
+      top: 30px;
+      left: 30px;
+      width: 50px;
+      height: 50px;
+    }
     img {
       position: relative;
       top: 50%;
@@ -85,28 +112,43 @@
   .hero-category,
   .small-category {
     position: absolute;
-    top: 30px;
-    left: 90px;
-    font: 600 16px/50px var(--fontPrimary);
+    top: 10px;
+    left: 55px;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    font: 600 12px/35px var(--fontPrimary);
+    @include breakpoint(tablet_small) {
+      font: 600 16px/50px var(--fontPrimary);
+      top: 30px;
+      left: 90px;
+      letter-spacing: 1px;
+
+    }
   }
   .small-name {
-    font: 900 24px/1.6 var(--fontPrimary);
     color: #fff;
     position: absolute;
-    bottom: 30px;
     letter-spacing: 1px;
-    left: 30px;
-    right: 30px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    font: 900 18px/1.6 var(--fontPrimary);
+    @include breakpoint(tablet_small) {
+      left: 30px;
+      right: 30px;
+      bottom: 30px;
+      font: 900 24px/1.6 var(--fontPrimary);
+    }
   }
   .small-item {
     background-position: center;
     background-size: cover;
     position: relative;
-    height: 50%;
     cursor: pointer;
+    height: 200px;
+    @include breakpoint(tablet_small) {
+      height: 50%;
+    }
     &:after {
       position: absolute;
       top: 0;
@@ -125,13 +167,21 @@
     }
   }
   .small-test-count {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    background: rgba(255, 255, 255, 0.5);
-    color: var(--textColor);
-    font: 400 11px/1.2 var(--fontPrimary);
-    p {
+    display: none;
+    @include breakpoint(tablet_small) {
+      display: block;
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      background: rgba(255, 255, 255, 0.5);
+      color: var(--textColor);
+      font: 400 11px/1.2 var(--fontPrimary);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+    }
+      p {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
@@ -141,9 +191,6 @@
       font-size: 16px;
       display: block;
     }
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    text-align: center;
+
   }
 }

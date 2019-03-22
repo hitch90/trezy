@@ -1,8 +1,15 @@
-<ul class="tests" [ngClass]="{'video' : type === 'video-yt'}">
+<ul class="tests">
     <li class="item" *ngFor="let test of tests">
-        <article class="test" *ngIf="test.type === 'text'">
+        <article class="test">
             <figure class="image">
-                <img [src]="test.image" [alt]="test.name">
+                <a [href]="test.link" [title]="test.name" target="_blank">
+                    <img [src]="test.image" [alt]="test.name" />
+                    <span class="type">
+                        <mat-icon *ngIf="test.type == 'video-yt'">play_circle_outline</mat-icon>
+                        <mat-icon *ngIf="test.type == 'text'">short_text</mat-icon>
+                    </span>
+                </a>
+
             </figure>
             <div class="content">
                 <h3 class="test-name">
@@ -13,31 +20,14 @@
                 <p class="test-desc">
                     {{ test.description }}
                 </p>
-                <a [href]="test.link" [title]="test.name" target="_blank" class="test-link">
+                <a [href]="test.link" [title]="test.name" target="_blank" class="link">
                     przejdź do recenzji
                 </a>
-            </div>
-        </article>
-
-        <article class="video-test" *ngIf="test.type === 'video-yt'">
-            <figure class="image">
-                <img [src]="test.image" [alt]="test.name">
-                <a [href]="test.link" [title]="test.name" target="_blank" class="link">
-                    przejdź do testu
-                </a>
-            </figure>
-            <div class="content">
-                <h3 class="name">
-                    <a [href]="test.link" [title]="test.name" target="_blank">
-                        {{ test.name }}
-                    </a>
-                </h3>
-
             </div>
         </article>
     </li>
 </ul>
 
 <div class="alert alert-warning" *ngIf="tests.length === 0">
-    Nie znaleziono żadnej recenzji/testu.
+    Nie znaleziono żadnych testów
 </div>

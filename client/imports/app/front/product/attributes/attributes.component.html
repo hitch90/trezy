@@ -1,6 +1,5 @@
 <ul class="attributes" *ngIf="attributes && attributes.length > 0">
-    <li class="title">Specyfikacja techniczna // <a href="#">zobacz szczegóły</a></li>
-    <li class="item" *ngFor="let attr of attributes | slice:0:5;">
+    <li class="item" *ngFor="let attr of attributes">
         <span class="label">
              <span class="icon">
                 <mat-icon *ngIf="attr['icon']">{{ attr['icon'] }}</mat-icon>

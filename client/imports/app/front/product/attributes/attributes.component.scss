@@ -1,6 +1,6 @@
 .attributes {
-  max-width: 480px;
-  margin: 30px 0 0;
+  max-width: 800px;
+  margin: 0 auto 30px;
   .title {
     font: 700 15px/35px var(--fontPrimary);
     color: #fff;
@@ -11,7 +11,7 @@
   }
   .item {
     color: #fff;
-    font: normal 14px/35px var(--fontPrimary);
+    font: normal 16px/55px var(--fontPrimary);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
@@ -21,13 +21,13 @@
   }
   .icon {
     display: inline-block;
-    width: 35px;
-    line-height: 35px;
+    width: 40px;
+    line-height: 55px;
     text-align: right;
     margin: 0 4px 0 0;
     .material-icons {
-      font-size: 20px;
-      line-height: 35px;
+      font-size: 25px;
+      line-height: 50px;
       vertical-align: top;
     }
   }

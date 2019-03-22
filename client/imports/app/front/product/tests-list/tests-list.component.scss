@@ -1,4 +1,6 @@
 .tests {
+  max-width: 800px;
+  margin: 0 auto;
   &.video {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -16,6 +18,7 @@
   border-radius: 4px;
   .image {
     width: 200px;
+    position: relative;
     img {
       border-radius: 3px;
     }
@@ -23,9 +26,10 @@
   .content {
     flex: 1;
     padding: 0 20px;
+    position: relative;
   }
   .test-name {
-    font: 700 16px/1.6 var(--fontPrimary);
+    font: 700 18px/1.6 var(--fontPrimary);
     margin: 0 0 10px;
     a {
       color: var(--textColor);
@@ -36,6 +40,7 @@
     height: 110px;
     overflow: hidden;
     position: relative;
+    opacity: 0.7;
     &:after {
       position: absolute;
       content: '';
@@ -50,17 +55,34 @@
       );
     }
   }
-  .test-link {
-    display: block;
-    margin-top: -15px;
-    text-align: right;
-    position: relative;
+  .link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
     z-index: 10;
     letter-spacing: 1px;
-    font: 700 12px/12px var(--fontPrimary);
+    font: 700 12px/30px var(--fontPrimary);
     text-transform: uppercase;
     color: var(--textColor);
-
+    background: var(--colorPrimary);
+    text-align: center;
+    padding: 0 15px;
+    display: inline-block;
+  }
+  .type {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: var(--backgroundDarkenColor);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    .material-icons {
+      line-height: 40px;
+    }
   }
 }
 

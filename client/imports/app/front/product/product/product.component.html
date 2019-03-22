@@ -15,32 +15,50 @@
           <app-product-category [id]="product.category"></app-product-category>
         </h2>
         <h3 class="price" *ngIf="product.price">
-          <span>orientacyjna cena</span>
-          {{ product.price }}
+          <span>orientacyjna cena</span> {{ product.price }}
         </h3>
-        <!--<app-product-attributes-->
-          <!--[attributes]="product.attributes"-->
-        <!--&gt;</app-product-attributes>-->
       </div>
     </div>
   </section>
   <div class="product-divider"></div>
-  <div class="product-tests dark-right">
+  <div class="tabs">
+    <ul class="container">
+      <ng-container *ngFor="let tab of tabs">
+        <li
+          class="tab-item"
+          (click)="activeTab = tab.id"
+          *ngIf="tab.isVisible"
+          [ngClass]="{ active: activeTab == tab.id }"
+        >
+          {{ tab.name }}
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+
+  <div class="product-tests" *ngIf="activeTab == 'tests'">
     <div class="row container">
-      <section class="col-xs-12 col-lg-6 padding-right zindex-3">
-        <h2 class="product-header">Recenzje</h2>
+      <section class="col-xs-12">
         <app-product-tests-list
           *ngIf="product"
           [id]="product._id"
         ></app-product-tests-list>
       </section>
-      <section class="col-xs-12 col-lg-6 padding-left zindex-3">
-        <h2 class="product-header">Testy video</h2>
-        <app-product-tests-list
-          *ngIf="product"
-          [id]="product._id"
-          type="video-yt"
-        ></app-product-tests-list>
+      <!-- <section class="col-xs-12 col-lg-6 padding-left zindex-3"> -->
+      <!-- <h2 class="product-header">Testy video</h2> -->
+      <!-- <app-product-tests-list -->
+      <!-- *ngIf="product" -->
+      <!-- [id]="product._id" -->
+      <!-- type="video-yt" -->
+      <!-- &gt;</app-product-tests-list> -->
+      <!-- </section> -->
+    </div>
+  </div>
+  <div class="product-tests" *ngIf="activeTab == 'spec'">
+    <div class="row container">
+      <section class="col-xs-12">
+        <app-product-attributes [attributes]="product.attributes">
+        </app-product-attributes>
       </section>
     </div>
   </div>

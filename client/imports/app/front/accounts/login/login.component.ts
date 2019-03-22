@@ -2,7 +2,7 @@ import { Component, NgZone } from '@angular/core';
 import { Accounts } from 'meteor/accounts-base';
 import { Tracker } from 'meteor/tracker';
 import { Meteor } from 'meteor/meteor';
-var _ = require('lodash');
+const _ = require('lodash');
 declare var Package;
 
 export interface LoginCredentials {

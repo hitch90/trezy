@@ -13,7 +13,7 @@ Meteor.methods({
     return false;
   },
   getTestsForProduct(product: string, type: string) {
-    return Tests.find({ product, type }).fetch();
+    return Tests.find({ product }).fetch();
   },
   getTestsForChannel(channel: string):Test[] {
     return Tests.find({ channel }).fetch();
