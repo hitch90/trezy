@@ -27,42 +27,4 @@
       max-width: 320px;
     }
   }
-  .item {
-    cursor: pointer;
-    color: var(--textColor);
-    &:hover {
-      color: var(--colorPrimary);
-      img {
-        transform: translateY(-50%) scale(1.05);
-      }
-    }
-  }
-  .cover {
-    margin: 0 0 15px;
-    height: 160px;
-    border-radius: 3px;
-    overflow: hidden;
-    img {
-      transition: 0.3s;
-      display: block;
-      border-radius: 3px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-  }
-  .name {
-    font: 500 16px/1.6 var(--fontPrimary);
-  }
-  .tests-count {
-    display: inline-block;
-    font: 300 13px/20px var(--fontPrimary);
-    color: var(--textSecondaryColor);
-    padding: 0 0 0 10px;
-  }
-  .price {
-    display: inline-block;
-    font: 600 14px/20px var(--fontPrimary);
-    color: var(--textColor);
-  }
 }

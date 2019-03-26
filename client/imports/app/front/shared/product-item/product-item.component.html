@@ -1,0 +1,8 @@
+<article class="product">
+  <figure class="cover" *ngIf="product.image">
+    <img [src]="product.image" [alt]="product.name" />
+  </figure>
+  <h2 class="name">{{ product.name }}</h2>
+  <p class="price" *ngIf="product.price">~{{ product.price }},</p>
+  <p class="tests-count">{{ product['count'] }} testów</p>
+</article>
