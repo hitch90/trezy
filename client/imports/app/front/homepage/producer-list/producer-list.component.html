@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="title">Producenci</h1>
     <ul class="list">
-      <li class="item" *ngFor="let producer of producers">
+      <li class="item" *ngFor="let producer of producers" [routerLink]="['/producer', producer._id]">
         <article class="producer">
           <figure class="cover" *ngIf="producer.image">
             <img [src]="producer.image" />

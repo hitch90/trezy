@@ -59,6 +59,9 @@ Meteor.methods({
   getByCategoryProducts(category: string): Product[] {
     return Products.find({ category }).fetch();
   },
+  getByProducerProducts(producer: string): Product[] {
+    return Products.find({ producer }).fetch();
+  },
   countByProducerProducts(producer: string): number {
     return Products.find({ producer }).fetch().length;
   }

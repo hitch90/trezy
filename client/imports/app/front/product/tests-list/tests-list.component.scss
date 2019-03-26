@@ -8,16 +8,23 @@
     grid-row-gap: 30px;
   }
 }
+@import '../../shared/styles/mixins';
 
 .test {
-  display: flex;
-  align-items: center;
   margin: 0 0 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding: 20px 0;
   border-radius: 4px;
+  @include breakpoint(tablet_small) {
+    display: flex;
+    align-items: center;
+  }
   .image {
-    width: 200px;
+    margin-bottom: 15px;
+    @include breakpoint(tablet_small) {
+      width: 200px;
+      margin-bottom: 0;
+    }
     position: relative;
     img {
       border-radius: 3px;
@@ -25,22 +32,35 @@
   }
   .content {
     flex: 1;
-    padding: 0 20px;
+    padding: 0;
     position: relative;
-  }
+    @include breakpoint(tablet_small) {
+      padding: 0 20px;
+
+    }
+    }
   .test-name {
-    font: 700 18px/1.6 var(--fontPrimary);
+    font: 600 15px/1.6 var(--fontPrimary);
     margin: 0 0 10px;
-    a {
+    @include breakpoint(tablet_small) {
+      font: 700 18px/1.6 var(--fontPrimary);
+
+    }
+      a {
       color: var(--textColor);
     }
   }
   .test-desc {
-    font: 300 14px/1.6 var(--fontPrimary);
-    height: 110px;
+    font: 300 12px/1.6 var(--fontPrimary);
+    height: 90px;
     overflow: hidden;
     position: relative;
     opacity: 0.7;
+    @include breakpoint(tablet_small) {
+      font: 300 14px/1.6 var(--fontPrimary);
+      height: 110px;
+
+  }
     &:after {
       position: absolute;
       content: '';
@@ -56,10 +76,7 @@
     }
   }
   .link {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 10;
+
     letter-spacing: 1px;
     font: 700 12px/30px var(--fontPrimary);
     text-transform: uppercase;
@@ -67,8 +84,15 @@
     background: var(--colorPrimary);
     text-align: center;
     padding: 0 15px;
-    display: inline-block;
-  }
+    display: block;
+    @include breakpoint(tablet_small) {
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 10;
+    }
+    }
   .type {
     position: absolute;
     top: 50%;

@@ -7,9 +7,10 @@ import { MatIconModule } from '@angular/material';
 import { ProductProducerComponent } from './producer/producer.component';
 import { ProductCategoryComponent } from './category/category.component';
 import {ProductTestsListComponent} from "./tests-list/tests-list.component";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
-  imports: [CommonModule, FrontSharedModule, MatIconModule],
+  imports: [CommonModule, FrontSharedModule, MatIconModule, RouterModule],
   declarations: [
     ProductComponent,
     ProductAttributesComponent,

@@ -60,4 +60,16 @@ export class ProductService {
       });
     });
   }
+  getByProducer(producer: string):Observable<Product> {
+    let products$;
+    products$ = MeteorObservable.call('getByProducerProducts', producer);
+    return new Observable(observer => {
+      products$.subscribe(data => {
+        for (let item of data) {
+          observer.next(item);
+        }
+        observer.complete();
+      });
+    });
+  }
 }

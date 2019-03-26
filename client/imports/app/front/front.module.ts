@@ -7,6 +7,8 @@ import { CategoryModule } from './category/category.module';
 import { CategoryRoutingModule } from './category/category-routing.module';
 import { ChannelModule } from './channel/channel.module';
 import { ChannelRoutingModule } from './channel/channel-routing.module';
+import { ProducerModule } from './producer/producer.module';
+import { ProducerRoutingModule } from './producer/producer-routing.module';
 
 @NgModule({
   imports: [
@@ -17,7 +19,9 @@ import { ChannelRoutingModule } from './channel/channel-routing.module';
     ProductRoutingModule,
     CategoryRoutingModule,
     ChannelModule,
-    ChannelRoutingModule
+    ChannelRoutingModule,
+    ProducerModule,
+    ProducerRoutingModule
   ],
   declarations: [],
   entryComponents: [],

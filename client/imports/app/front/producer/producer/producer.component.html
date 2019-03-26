@@ -1,0 +1,19 @@
+<div class="front-wrapper">
+  <app-header></app-header>
+
+  <section *ngIf="producer" class="category">
+    <div class="container">
+      <div class="category-meta">
+        <figure *ngIf="producer.image" class="icon">
+          <img [src]="producer.image" [alt]="producer.name" />
+        </figure>
+        <h1 class="name">{{ producer.name }}</h1>
+      </div>
+    </div>
+  </section>
+
+  <app-producer-products-list
+    *ngIf="producer"
+    [producer]="producer._id"
+  ></app-producer-products-list>
+</div>
