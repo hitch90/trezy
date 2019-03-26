@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../../../../../imports/models/product';
-import { ProductService } from '../../../_core/_services';
+import {MetaService, ProductService} from '../../../_core/_services';
+import {DOCUMENT} from "@angular/common";
 
 @Component({
   selector: 'app-product',
@@ -20,17 +21,22 @@ export class ProductComponent implements OnInit {
   activeTab = 'tests';
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private metaService: MetaService,
+    @Inject(DOCUMENT) private dom
   ) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.get(params.id);
     });
+    this.metaService.createCanonicalURL(this.dom.URL);
+
   }
   get(id) {
     this.productService.get(id).subscribe(data => {
       this.product = data;
+      this.metaService.setPageTitle(this.product.name);
       this.generateTab();
     });
   }

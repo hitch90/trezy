@@ -1,4 +1,4 @@
-.category {
+.producer {
   background: var(--colorPrimary);
   .container {
     width: 100%;
@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
   }
-  .category-meta {
+  .meta {
     display: flex;
     align-items: center;
     padding: 25px 0 0 0;
@@ -38,26 +38,5 @@
     font: 900 40px/1.6 var(--fontPrimary);
     color: #fff;
     flex: 1;
-  }
-}
-
-.product-tests {
-  .container {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-  .product-header {
-    font: 900 32px/32px var(--fontPrimary);
-    padding: 0 0 30px;
-    margin: 0;
-    color: var(--colorPrimary);
-    position: relative;
-  }
-  .padding-right {
-    padding-right: 30px;
-  }
-  .padding-left {
-    padding-left: 30px;
   }
 }

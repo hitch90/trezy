@@ -1,7 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {Component, Inject, OnDestroy, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ChannelService, ProductService } from '../../../_core/_services';
+import {ChannelService, MetaService, ProductService} from '../../../_core/_services';
 import { Channel } from '../../../../../../imports/models/channels';
+import {DOCUMENT} from "@angular/common";
 
 @Component({
   selector: 'app-channel',
@@ -13,7 +14,9 @@ export class ChannelComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
-    private channelService: ChannelService
+    private channelService: ChannelService,
+    private metaService: MetaService,
+    @Inject(DOCUMENT) private dom
   ) {}
 
   ngOnInit() {
@@ -21,12 +24,14 @@ export class ChannelComponent implements OnInit, OnDestroy {
       this.channel = null;
       this.get(params.id);
     });
+    this.metaService.createCanonicalURL(this.dom.URL);
   }
   ngOnDestroy(): void {}
 
   get(id) {
     this.channelService.get(id).subscribe(data => {
       this.channel = data;
+      this.metaService.setPageTitle(this.channel.name);
     });
   }
 }

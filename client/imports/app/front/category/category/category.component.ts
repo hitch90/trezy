@@ -1,9 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {Component, Inject, OnDestroy, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../../../../../imports/models/product';
-import { CategoryService, ProductService } from '../../../_core/_services';
+import {CategoryService, MetaService, ProductService} from '../../../_core/_services';
 import { Category } from '../../../../../../imports/models/categories';
 import { Subscription } from 'rxjs';
+import {DOCUMENT} from "@angular/common";
 
 @Component({
   selector: 'app-category',
@@ -18,7 +19,9 @@ export class CategoryComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
+    private metaService: MetaService,
+    @Inject(DOCUMENT) private dom
   ) {}
 
   ngOnInit() {
@@ -28,6 +31,8 @@ export class CategoryComponent implements OnInit, OnDestroy {
       this.get(params.id);
       this.getSubCategories(params.id);
     });
+    this.metaService.createCanonicalURL(this.dom.URL);
+
   }
   ngOnDestroy(): void {
     if (this.subcategories$) {
@@ -38,6 +43,7 @@ export class CategoryComponent implements OnInit, OnDestroy {
   get(id) {
     this.categoryService.get(id).subscribe(data => {
       this.category = data;
+      this.metaService.setPageTitle(this.category.name);
     });
   }
   getSubCategories(id) {

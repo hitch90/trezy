@@ -8,3 +8,4 @@ export * from './product.services';
 export * from './producer.services';
 export * from './attribute.services';
 export * from './test.services';
+export * from './meta.services';

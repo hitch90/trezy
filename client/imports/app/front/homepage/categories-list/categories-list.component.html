@@ -8,7 +8,7 @@
     >
       <article class="category">
         <figure class="cover" *ngIf="category.image">
-          <img [src]="category.image" />
+          <img [src]="category.image" [alt]="category.name" />
         </figure>
         <h2 class="name">{{ category.name }}</h2>
         <p class="categories-count" *ngIf="category.count">

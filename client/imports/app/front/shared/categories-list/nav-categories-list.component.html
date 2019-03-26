@@ -6,11 +6,11 @@
         <mat-form-field class="field" appearance="outline">
           <mat-label>Wyszukaj kategorię</mat-label>
           <input
-                  matInput
-                  [(ngModel)]="categoriesName"
-                  type="email"
-                  (keyup)="searchCategories()"
-                  class="input"
+            matInput
+            [(ngModel)]="categoriesName"
+            type="email"
+            (keyup)="searchCategories()"
+            class="input"
           />
         </mat-form-field>
       </div>
@@ -22,7 +22,12 @@
             <img [src]="category.image" [alt]="category.name" />
           </figure>
           <h2 class="name">
-            <a [routerLink]="['/category', category._id]">{{ category.name }}</a>
+            <a
+              [routerLink]="['/category', category._id]"
+              [title]="category.name"
+            >
+              {{ category.name }}
+            </a>
           </h2>
         </article>
       </li>

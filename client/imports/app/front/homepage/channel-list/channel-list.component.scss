@@ -1,11 +1,11 @@
 @import '../../shared/styles/mixins';
 
 .channels {
-  margin: 0 auto 30px;
+  margin: 0 auto;
   background: var(--backgroundDarkenColor);
   padding: 30px 10px;
   @include breakpoint(tablet_small) {
-    margin: 0 auto 50px;
+    margin: 0 auto;
     padding: 50px 10px;
   }
   @include breakpoint('1460px') {

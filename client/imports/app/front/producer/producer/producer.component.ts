@@ -1,7 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {Component, Inject, OnDestroy, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProducerService } from '../../../_core/_services';
+import {MetaService, ProducerService} from '../../../_core/_services';
 import { Producer } from '../../../../../../imports/models/producers';
+import {DOCUMENT} from "@angular/common";
 
 @Component({
   selector: 'app-producer',
@@ -12,7 +13,9 @@ export class ProducerComponent implements OnInit, OnDestroy {
   producer: Producer;
   constructor(
     private route: ActivatedRoute,
-    private producerService: ProducerService
+    private producerService: ProducerService,
+    private metaService: MetaService,
+    @Inject(DOCUMENT) private dom
   ) {}
 
   ngOnInit() {
@@ -20,12 +23,14 @@ export class ProducerComponent implements OnInit, OnDestroy {
       this.producer = null;
       this.get(params.id);
     });
+    this.metaService.createCanonicalURL(this.dom.URL);
   }
   ngOnDestroy(): void {}
 
   get(id) {
     this.producerService.get(id).subscribe(data => {
       this.producer = data;
+      this.metaService.setPageTitle(this.producer.name);
     });
   }
 }

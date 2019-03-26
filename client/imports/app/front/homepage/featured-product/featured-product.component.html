@@ -1,6 +1,10 @@
 <div class="featured-products" *ngIf="!isLoading">
   <div class="container">
-    <div class="hero" [style.backgroundImage]="'url(' + product.image + ')'" [routerLink]="'/product/' + product._id">
+    <div
+      class="hero"
+      [style.backgroundImage]="'url(' + product.image + ')'"
+      [routerLink]="'/product/' + product._id"
+    >
       <h2 class="hero-name">{{ product.name }}</h2>
       <h3 class="hero-category" *ngIf="product['category_data']">
         {{ product['category_data'].name }}
@@ -12,7 +16,9 @@
         />
       </h3>
       <h4 class="hero-test-count">
-        <p><span>{{ product['count'] }}</span> testów</p>
+        <span class="position">
+          <span class="count">{{ product['count'] }}</span> testów
+        </span>
       </h4>
     </div>
     <div class="small">
@@ -33,7 +39,9 @@
           />
         </h3>
         <h4 class="small-test-count">
-          <p><span>{{ product['count'] }}</span> testów</p>
+          <span class="position">
+             <span class="count">{{ product['count'] }}</span> testów
+          </span>
         </h4>
       </div>
     </div>

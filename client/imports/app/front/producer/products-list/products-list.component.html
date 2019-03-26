@@ -5,32 +5,41 @@
       <mat-form-field class="field" appearance="outline">
         <mat-label>Wyszukaj produkt</mat-label>
         <input
-                matInput
-                [(ngModel)]="productName"
-                type="email"
-                (keyup)="search()"
+          matInput
+          [(ngModel)]="productName"
+          type="email"
+          (keyup)="search()"
         />
       </mat-form-field>
     </div>
   </div>
 
   <ul class="list">
-    <li class="item" *ngFor="let product of filterProducts" [routerLink]="'/product/' + product._id">
+    <li
+      class="item"
+      *ngFor="let product of filterProducts"
+      [routerLink]="'/product/' + product._id"
+    >
       <article class="product">
         <figure class="cover" *ngIf="product.image">
-          <img [src]="product.image" />
+          <img [src]="product.image" [alt]="product.name" />
         </figure>
         <h2 class="name">{{ product.name }}</h2>
-        <p class="tests-count">
-          {{ product['count'] }} testów
-        </p>
+        <p class="price" *ngIf="product.price">~{{ product.price }},</p>
+        <p class="tests-count">{{ product['count'] }} testów</p>
       </article>
     </li>
   </ul>
-  <div class="alert alert-warning" *ngIf="filterProducts.length === 0 && !productName">
+  <div
+    class="alert alert-warning"
+    *ngIf="filterProducts.length === 0 && !productName"
+  >
     Brak produktów w wybranej kategorii
   </div>
-  <div class="alert alert-danger" *ngIf="filterProducts.length === 0 && productName">
+  <div
+    class="alert alert-danger"
+    *ngIf="filterProducts.length === 0 && productName"
+  >
     Nie znaleziono żadnych produktów
   </div>
 </section>

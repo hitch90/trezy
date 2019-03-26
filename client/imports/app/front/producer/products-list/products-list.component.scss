@@ -3,7 +3,7 @@
   margin: 0 auto 50px;
   .title {
     font: 900 28px/1.6 var(--fontPrimary);
-    padding: 0 30px 30px 0;
+    padding: 0 30px 0 0;
     margin: 0;
     color: var(--textColor);
   }
@@ -18,6 +18,7 @@
   .header {
     display: flex;
     align-items: center;
+    margin-bottom: 30px;
   }
   .search {
     flex: 1;
@@ -38,7 +39,7 @@
   }
   .cover {
     margin: 0 0 15px;
-    height: 200px;
+    height: 160px;
     border-radius: 3px;
     overflow: hidden;
     img {
@@ -54,7 +55,14 @@
     font: 500 16px/1.6 var(--fontPrimary);
   }
   .tests-count {
-    font: 300 13px/1.6 var(--fontPrimary);
+    display: inline-block;
+    font: 300 13px/20px var(--fontPrimary);
     color: var(--textSecondaryColor);
+    padding: 0 0 0 10px;
+  }
+  .price {
+    display: inline-block;
+    font: 600 14px/20px var(--fontPrimary);
+    color: var(--textColor);
   }
 }
