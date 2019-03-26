@@ -50,6 +50,7 @@
     bottom: 10px;
     left: 10px;
     right: 10px;
+    text-shadow: 1px 1px 1px #000;
     @include breakpoint(tablet_small) {
       bottom: 30px;
       left: 30px;
@@ -71,6 +72,7 @@
       height: 80px;
       display: block;
       text-align: center;
+      text-shadow: 1px 1px 1px #000;
     }
     .position {
       position: relative;
@@ -133,6 +135,7 @@
     right: 10px;
     bottom: 10px;
     font: 900 18px/1.6 var(--fontPrimary);
+    text-shadow: 1px 1px 1px #000;
     @include breakpoint(tablet_small) {
       left: 30px;
       right: 30px;
@@ -180,6 +183,7 @@
       width: 60px;
       height: 60px;
       text-align: center;
+      text-shadow: 1px 1px 1px #000;
     }
     .position {
       position: relative;
