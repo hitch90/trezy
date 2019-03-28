@@ -17,6 +17,9 @@ export class CategoryService {
   remove(id: string): Observable<any> {
     return MeteorObservable.call('removeCategory', id);
   }
+  update(category: Category): Observable<any> {
+    return MeteorObservable.call('updateCategory', category);
+  }
   get(id:string): Observable<Category> {
     let categories$;
     categories$ = MeteorObservable.call('getCategory', id);

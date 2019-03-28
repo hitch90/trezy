@@ -39,7 +39,15 @@ export class AdminTestsFormComponent implements OnInit, OnDestroy {
     this.route.params.subscribe(params => {
       if (params.id) {
         MeteorObservable.call('getTest', params.id).subscribe(data => {
-          this.testForm.patchValue({});
+          this.testForm.patchValue({
+            type: data['type'],
+            name: data['name'],
+            description: data['description'],
+            link: data['link'],
+            channel: data['channel'],
+            product: data['product'],
+            image: data['image'],
+          });
         });
       }
     });

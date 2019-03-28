@@ -11,6 +11,7 @@ import {AdminAttributesComponent} from "./admin-attributes/admin-attributes.comp
 import {AdminTestsComponent} from "./admin-tests/admin-tests.component";
 import {AdminTestsFormComponent} from "./admin-tests-form/admin-tests-form.component";
 import {AuthGuard} from "../_core/_guards";
+import {AdminEditFormComponent} from "./admin-edit-form/admin-edit-form/admin-edit-form.component";
 
 const routes: Routes = [
   {
@@ -46,6 +47,11 @@ const routes: Routes = [
   {
     path: 'admin/producers',
     component: AdminProducersComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'admin/edit/:type/:id',
+    component: AdminEditFormComponent,
     canActivate: [AuthGuard]
   },
   {

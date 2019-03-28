@@ -1,4 +1,4 @@
-<article class="product">
+<article class="product" [routerLink]="['/product', product._id]">
   <figure class="cover" *ngIf="product.image">
     <img [src]="product.image" [alt]="product.name" />
   </figure>

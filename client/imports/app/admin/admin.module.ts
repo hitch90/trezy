@@ -32,6 +32,7 @@ import { AdminProductFormAttributesComponent } from './admin-product-form/admin-
 import { AdminHomepageModule } from './admin-homepage/admin-homepage.module';
 import {AdminTestsComponent} from "./admin-tests/admin-tests.component";
 import {AdminTestsFormComponent} from "./admin-tests-form/admin-tests-form.component";
+import {AdminEditFormModule} from "./admin-edit-form/admin-edit-form.module";
 
 @NgModule({
   imports: [
@@ -51,7 +52,8 @@ import {AdminTestsFormComponent} from "./admin-tests-form/admin-tests-form.compo
     MatListModule,
     MatDialogModule,
       MatRadioModule,
-    AdminHomepageModule
+    AdminHomepageModule,
+      AdminEditFormModule
   ],
   declarations: [
     AdminChannelFormComponent,

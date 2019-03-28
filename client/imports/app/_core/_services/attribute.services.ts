@@ -15,4 +15,17 @@ export class AttributeService {
   remove(id: string): Observable<any> {
     return MeteorObservable.call('removeAttribute', id);
   }
+  update(attribute: Attribute): Observable<any> {
+    return MeteorObservable.call('updateAttribute', attribute);
+  }
+  get(id: string): Observable<Attribute> {
+    let attr$;
+    attr$ = MeteorObservable.call('getAttribute', id);
+    return new Observable(observer => {
+      attr$.subscribe(data => {
+        observer.next(data);
+        observer.complete();
+      });
+    });
+  }
 }

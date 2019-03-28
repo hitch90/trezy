@@ -16,6 +16,21 @@ Meteor.methods({
       _id
     });
   },
+  updateCategory(category: Category) {
+    Categories.update(
+        {
+          _id: category._id
+        },
+        {
+          $set: {
+            name: category.name,
+            description: category.description,
+            image: category.image,
+            parent: category.parent,
+          }
+        }
+    );
+  },
   getCategory(_id: string): Category {
     return Categories.findOne({ _id });
   },

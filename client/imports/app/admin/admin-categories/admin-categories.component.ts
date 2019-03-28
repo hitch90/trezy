@@ -32,7 +32,6 @@ export class AdminCategoriesComponent implements OnInit, OnDestroy {
     ).subscribe(() => {
       this.categories = Categories.find().pipe(
         map(item => {
-          console.log(item);
           return item;
         })
       );

@@ -3,5 +3,4 @@ export interface Attribute {
   name: string;
   description?: string;
   icon?: string;
-  parent?: string;
 }

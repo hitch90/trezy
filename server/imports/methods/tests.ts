@@ -28,6 +28,9 @@ Meteor.methods({
   },
   getCountTests(product: string):number {
     return Tests.find({ product }).fetch().length;
+  },
+  getTest(_id: string):Test {
+    return Tests.findOne({ _id });
   }
 });
 

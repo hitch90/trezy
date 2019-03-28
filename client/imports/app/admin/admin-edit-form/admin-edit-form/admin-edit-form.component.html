@@ -1,0 +1,67 @@
+<div class="admin-wrapper" *ngIf="data">
+  <app-admin-header></app-admin-header>
+  <div class="admin-page-wrapper">
+
+    <h3 class="admin-page-title">
+      Edytujesz
+      <span *ngIf="type == 'category'">kategorię: </span>
+      <span *ngIf="type == 'attribute'">atrybut: </span>
+      <span *ngIf="type == 'producer'">producenta: </span>
+      {{ data.name }}
+    </h3>
+    <div class="row">
+      <div class="col-sm-6">
+        <form
+          [formGroup]="editForm"
+          (submit)="save()"
+          class="admin-page-form"
+        >
+          <div class="admin-page-form-field">
+            <mat-form-field class="field" appearance="outline">
+              <mat-label>Nazwa</mat-label>
+              <input matInput formControlName="name" />
+            </mat-form-field>
+          </div>
+          <div class="admin-page-form-field">
+            <mat-form-field class="field" appearance="outline">
+              <mat-label>Opis</mat-label>
+              <input matInput formControlName="description" />
+            </mat-form-field>
+          </div>
+          <div class="admin-page-form-field" *ngIf="type != 'attribute'">
+            <mat-form-field class="field" appearance="outline">
+              <mat-label>Zdjęcie</mat-label>
+              <input matInput formControlName="image" />
+            </mat-form-field>
+          </div>
+
+          <div class="admin-page-form-field" *ngIf="type == 'attribute'">
+            <mat-form-field class="field" appearance="outline">
+              <mat-label>Ikona</mat-label>
+              <input matInput formControlName="icon" />
+            </mat-form-field>
+          </div>
+          <div class="admin-page-form-field" *ngIf="type == 'category'">
+            <mat-form-field class="field" appearance="outline">
+              <mat-label>Kategoria nadrzędna</mat-label>
+              <mat-select formControlName="parent">
+                <mat-option value=""> Brak </mat-option>
+                <mat-option
+                  *ngFor="let category of categories"
+                  [value]="category._id"
+                >
+                  {{ category.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="form-field">
+            <button mat-raised-button color="primary" type="submit">
+              Zapisz
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

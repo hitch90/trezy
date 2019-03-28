@@ -19,5 +19,19 @@ Meteor.methods({
   getAttribute(_id: string): Attribute {
     return Attributes.findOne({ _id });
   },
+  updateAttribute(attribute: Attribute) {
+    Attributes.update(
+      {
+        _id: attribute._id
+      },
+      {
+        $set: {
+          name: attribute.name,
+          description: attribute.description,
+          icon: attribute.icon
+        }
+      }
+    );
+  },
   getAllAttributes() {}
 });
