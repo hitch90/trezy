@@ -9,9 +9,10 @@ import {ProductsListComponent} from "./products-list/products-list.component";
 import {RouterModule} from "@angular/router";
 import {TestsListComponent} from "./tests-list/tests-list.component";
 import {HomepageChannelListComponent} from "./channel-list/channel-list.component";
+import {MatIconModule} from "@angular/material";
 
 @NgModule({
-  imports: [CommonModule, FrontSharedModule, RouterModule],
+  imports: [CommonModule, FrontSharedModule, RouterModule, MatIconModule],
   declarations: [HomepageComponent, CategoriesListComponent, FeaturedProductComponent, ProducerListComponent, ProductsListComponent, TestsListComponent, HomepageChannelListComponent],
   exports: [HomepageComponent],
   providers: []

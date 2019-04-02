@@ -1,17 +1,31 @@
 <section class="products">
   <h1 class="title">Nowe testy</h1>
-  <ul class="list">
+  <ul class="tests">
     <li class="item" *ngFor="let test of tests">
-      <a [href]="test.link" target="_blank">
-        <article class="product">
-          <figure class="cover" *ngIf="test.image">
+      <article class="test">
+        <figure class="image">
+          <a [href]="test.link" [title]="test.name" target="_blank">
             <img [src]="test.image" [alt]="test.name" />
-            <span class="type" *ngIf="test.type == 'text'">Recenzja</span>
-            <span class="type" *ngIf="test.type == 'video-yt'">Video test</span>
-          </figure>
-          <h2 class="name">{{ test.name }}</h2>
-        </article>
-      </a>
+            <span class="type">
+            <mat-icon *ngIf="test.type && test.type == 'video-yt'"
+            >play_circle_outline</mat-icon
+            >
+            <mat-icon *ngIf="test.type && test.type == 'text'">short_text</mat-icon>
+          </span>
+          </a>
+        </figure>
+        <div class="content">
+          <h3 class="test-name">
+            <a [href]="test.link" [title]="test.name" target="_blank">
+              {{ test.name }}
+            </a>
+          </h3>
+          <p class="test-desc">{{ test.description }}</p>
+          <a [href]="test.link" [title]="test.name" target="_blank" class="link">
+            przejdź do recenzji
+          </a>
+        </div>
+      </article>
     </li>
   </ul>
 </section>

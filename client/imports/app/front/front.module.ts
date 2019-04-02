@@ -21,7 +21,8 @@ import { ProducerRoutingModule } from './producer/producer-routing.module';
     ChannelModule,
     ChannelRoutingModule,
     ProducerModule,
-    ProducerRoutingModule
+    ProducerRoutingModule,
+
   ],
   declarations: [],
   entryComponents: [],

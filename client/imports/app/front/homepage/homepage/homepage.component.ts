@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MetaService} from "../../../_core/_services";
 
 @Component({
   selector: 'app-homepage',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
-  constructor() {}
+  constructor(
+      private metaService: MetaService
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.metaService.setPageTitle('Strona główna');
+
+  }
 }

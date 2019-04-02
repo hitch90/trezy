@@ -16,6 +16,6 @@ export class MetaService {
     link.setAttribute('href', this.dom.URL);
   }
   setPageTitle(title: string) {
-    this.title.setTitle(title);
+    this.title.setTitle(title + ' - Trezy.pl - zbiór recenzji i testów video');
   }
 }

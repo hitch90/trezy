@@ -16,7 +16,6 @@ export class ChannelComponent implements OnInit, OnDestroy {
     private productService: ProductService,
     private channelService: ChannelService,
     private metaService: MetaService,
-    @Inject(DOCUMENT) private dom
   ) {}
 
   ngOnInit() {
@@ -24,7 +23,7 @@ export class ChannelComponent implements OnInit, OnDestroy {
       this.channel = null;
       this.get(params.id);
     });
-    this.metaService.createCanonicalURL(this.dom.URL);
+    this.metaService.createCanonicalURL();
   }
   ngOnDestroy(): void {}
 
