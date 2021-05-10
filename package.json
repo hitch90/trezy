@@ -24,7 +24,7 @@
     "@types/gapi.client.drive": "^3.0.3",
     "angular2-meteor-accounts-ui": "^1.0.0",
     "core-js": "2.5.7",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "meteor-node-stubs": "0.4.1",
     "meteor-rxjs": "0.4.14",
     "ng6-toastr-notifications": "^1.0.4",
